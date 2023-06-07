@@ -1,0 +1,51 @@
+T-factor courses without hands on ::-
+
+1>   Machine Learning Axioms - 0.2          --->  MCQ :-https://www.notesbureau.com/2021/09/machine-learning-axioms-fresco-play.html
+
+2>   Service Discovery - 0.2                ---> MCQ :- https://www.mncanswers.site/2021/10/service-discovery-mcqs-solution-tcs.html
+
+3>   Infrastructure as Code - 0.2           ---> MCQ :- https://www.notesbureau.com/2021/08/infrastructure-as-code-fresco-play-mcqs.html
+
+4>   Continuous Integration - 0.2           ---> MCQ:- https://www.notesbureau.com/2021/07/continuous-integration-fresco-play-mcqs_31.html
+
+5>   React Native - 0.25                    ---> MCQ :- https://www.mncanswers.site/2021/11/native-react-mcq-solution-tcs-fresco.html
+
+6>   UI Design - 0.25                       ---> MCQ:- https://www.notesbureau.com/2021/07/ui-design-fresco-play-mcqs-answers_11.html
+
+7>   Internet of Things Prime - 0.2         ---> MCQ:- https://www.notesbureau.com/2021/07/internet-of-things-prime-fresco-play_9.html
+
+8>   API Gateways - 0.2          	    ---> MCQ:- https://www.notesbureau.com/2022/06/api-gateways-fp-mcqs-answers.html
+
+9>   APIGEE - Analytics Services- 0.25	    ---> MCQ:- https://www.notesbureau.com/2022/06/apigee-analytics-services-fp-mcqs.html
+
+10>  APIGEE - API Services- 0.25            ---> MCQ:- https://www.notesbureau.com/2021/08/apigee-api-services-fresco-play-mcqs.html
+
+11>  Cloud Computing - 0.2                  ---> MCQ:- https://www.notesbureau.com/2021/07/cloud-computing-fresco-play-mcqs-answers_10.html
+
+12>  Digital Primer - 0.15                  ---> MCQ:- https://www.notesbureau.com/2021/08/digital-primer-fresco-play-mcqs-answers.html
+
+13>  Caching Techniques - 0.2               ---> MCQ:- https://www.notesbureau.com/2021/07/caching-techniques-fresco-play-mcqs_36.html
+
+14>  Data Visualization Aurora - 0.2        ---> MCQ:- https://madanswer.com/15237/data-visualisation-aurora
+
+15>  SAP ABAP Data Dictionary - 1           ---> MCQ:- https://www.mncanswers.site/2022/09/sap-abap-data-dictionary-mcqs-solution.html
+
+16>  Secure Programming Practices - 0.1      ---> MCQ:- https://www.mncanswers.site/2022/09/secure-programming-practices-mcqs.html
+
+17>  Machine Learning - Exploring the Model - 0.25   	---> MCQ:- https://www.notesbureau.com/2021/08/machine-learning-exploring-model-fresco.html
+
+18>  Magento - 0.25                                   	---> MCQ:- https://www.scribd.com/document/437471367/magento-test-questions-docx
+
+19>  Digital for Industries - 0.15 		      	---> MCQ:- https://www.mncanswers.site/2021/10/digital-for-industries-mcqs-solution.html
+ 
+20>  Automatix - Art of RPA - 0.15		      	---> MCQ:- https://www.notesbureau.com/2021/08/automatix-art-of-rpa-fresco-play-mcqs.html
+
+21>  Purview of Icon Design -0.2			---> MCQ:- https://smartanswer.in/2021/08/purview-of-icon-design-interview-question-answer.html
+
+
+22>  Java 8 Innards ->55961  - 0.25                     ---> MCQ:- https://madanswer.com/60889/java8-innards-interview-questions-and-answers-from-fresco-play
+ 							      Handson -> https://www.tejatechview.com/2021/03/java-8-innards-fresco-play-solution-t.html
+
+
+23>  Blockchain - Potentes Nexus -0.2                   ---> MCQ:- https://www.notesbureau.com/2021/07/blockchain-potentes-nexus-fresco-play_9.html
+							      Handson -> No need to write code just submit and it will clear.
