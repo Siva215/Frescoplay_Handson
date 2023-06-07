@@ -1,0 +1,105 @@
+23.IF (Conditional Statement) (Hands-on - using if)
+
+
+#!/bin/python3
+
+import math
+
+import os
+
+import random
+
+import re
+
+import sys
+
+
+#
+
+# Complete the 'calculateGrade' function below.
+
+#
+
+# The function is expected to return a STRING_ARRAY.
+
+# The function accepts 2D_INTEGER_ARRAY students_marks as parameter.
+
+#
+
+
+def calculateGrade(students_marks):
+
+    # Write your code here
+
+    list1 = list()
+
+    for i in range(len(students_marks)):
+
+        count = 0
+
+        sum = 0
+
+        avg = 0
+
+        for j in range(len(students_marks[i])):
+
+            count = count + 1
+
+            sum = sum + students_marks[i][j]
+
+        avg = sum/count
+
+        if avg >= 90:
+
+            list1.append("A+")
+
+        elif avg >= 80:
+
+            list1.append("A")
+
+        elif avg >= 70:
+
+            list1.append("B")
+
+        elif avg >= 60:
+
+            list1.append("C")
+
+        elif avg >= 50:
+
+            list1.append("D")
+
+        elif avg < 50:
+
+            list1.append("F")
+
+    return list1
+
+
+if __name__ == '__main__':
+
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+
+    students_marks_rows = int(input().strip())
+
+    students_marks_columns = int(input().strip())
+
+
+    students_marks = []
+
+
+    for _ in range(students_marks_rows):
+
+        students_marks.append(list(map(int, input().rstrip().split())))
+
+
+    result = calculateGrade(students_marks)
+
+
+    fptr.write('\n'.join(result))
+
+    fptr.write('\n')
+
+
+    fptr.close()

@@ -1,0 +1,35 @@
+4.Namespaces 2 (Hands-on – Namespaces)
+
+If not working and getting server error then Change Prompt() to Promp() at both places
+
+
+
+#!/bin/python3
+
+
+import math
+
+import os
+
+import random
+
+import re
+
+import sys
+
+
+
+def Promp():
+
+    # Write your code here
+
+    x = input('Enter a STRING:\n')
+
+    print(x)
+
+    print(type(x))
+
+if __name__ == '__main__':
+
+
+    Promp()

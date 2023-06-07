@@ -1,0 +1,43 @@
+3.Handson - Python - Get Additional Info (Hands-on - Get Additional Info)
+
+
+
+#!/bin/python3
+
+
+import math
+
+import os
+
+import random
+
+import re
+
+import sys
+
+#
+
+# Complete the 'docstring' function below.
+
+#
+
+# The function is expected to output a STRING.
+
+# The function accepts STRING x as parameter.
+
+#
+
+
+def docstring(functionname):
+
+    # Write your code here
+
+    help(functionname)
+
+
+if __name__ == '__main__':
+
+
+    x = input()
+
+    docstring(x)

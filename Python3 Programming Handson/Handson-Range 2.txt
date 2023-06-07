@@ -1,0 +1,58 @@
+18.Range 2 (Hands-on – range)
+
+
+#!/bin/python3
+
+
+import math
+
+import os
+
+import random
+
+import re
+
+import sys
+
+
+#
+
+# Complete the 'generateList' function below.
+
+#
+
+# The function accepts following parameters:
+
+#  1. INTEGER startvalue
+
+#  2. INTEGER endvalue
+
+#
+
+
+def generateList(startvalue, endvalue):
+
+    # Write your code here
+
+    list1 = list(range(startvalue,endvalue+1))
+
+    print(list1[:3])
+
+    list2 = list1[::-1]
+
+    print(list2[0:5])
+
+    print(list1[::4])
+
+    print(list2[::2])
+
+
+if __name__ == '__main__':
+
+    startvalue = int(input().strip())
+
+
+    endvalue = int(input().strip())
+
+
+    generateList(startvalue, endvalue)

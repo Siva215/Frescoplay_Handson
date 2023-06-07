@@ -1,0 +1,61 @@
+17.Slicing (Hands-on – Slicing)
+
+
+#!/bin/python3
+
+
+import math
+
+import os
+
+import random
+
+import re
+
+import sys
+
+
+#
+
+# Complete the 'sliceit' function below.
+
+#
+
+# The function accepts List mylist as parameter.
+
+#
+
+
+def sliceit(mylist):
+
+    # Write your code here
+
+    a = slice(1,3)
+
+    print(mylist[a])
+
+    b = slice(1,len(mylist),2)
+
+    print(mylist[b])
+
+    c = slice(-1,-4,-1)
+
+    print(mylist[c])
+
+
+if __name__ == '__main__':
+
+    mylist_count = int(input().strip())
+
+
+    mylist = []
+
+
+    for _ in range(mylist_count):
+
+        mylist_item = input()
+
+        mylist.append(mylist_item)
+
+
+    sliceit(mylist)
