@@ -1,0 +1,237 @@
+Frescoplay T-factor start - 0.00  To 1.99
+
+
+1> Bootstrap Framework - 0.5
+
+Mcqs :-  https://www.notesbureau.com/2021/07/bootstrap-framework-fresco-play-mcqs_11.html
+
+hands on :-  https://www.notesbureau.com/2021/07/bootstrap-framework-fresco-play-hands_11.html
+
+ 
+
+
+
+2> Java8 Qualis - 0.5
+
+Mcqs :-  https://www.notesbureau.com/2021/10/java8-qualis-fresco-play-mcqs-answers.html
+
+hands on :- https://www.tejatechview.com/2021/08/java-8-qualis-hands-on-solutions.html
+
+
+
+
+
+3> Python Qualis - 0.5
+
+Mcqs :- https://www.notesbureau.com/2021/11/python-qualis-fresco-play-mcqs-answers.html
+
+hands on :-  https://www.pdfcup.com/2022/10/python-qualis-fresco-play-handson.html
+
+
+
+
+
+4> NLP Using Python - 0.5
+
+Mcqs :-  https://www.mncanswers.site/2022/03/nlp-using-python-mcq-solutions-tcs.html
+
+hands on :-  https://www.pdfcup.com/2023/01/nlp-using-python-fresco-play-hands-on.html
+
+
+
+
+
+5> Python 3 Application Programming - 0.6
+
+Mcqs :-  https://www.notesbureau.com/2022/01/python-3-application-programming-fresco.html
+
+hands on :-  https://www.pdfcup.com/2022/09/python-3-application-programming-hacker.html
+
+
+
+
+6> Python 3 Programming - 0.6
+
+Mcqs :-  https://www.notesbureau.com/2022/12/python-3-programming-fp-mcqs-answers.html
+
+hands on :-  https://www.notesbureau.com/2022/12/python-3-programming-fp-handson.html
+
+
+
+
+
+7> Python Pandas - 0.6
+
+Mcqs :-   https://www.notesbureau.com/2021/07/python-pandas-fresco-play-mcqs-answers_97.html
+
+hands on :-   https://www.pdfcup.com/2023/01/python-pandas-fresco-play-hands-on.html
+
+
+
+
+
+8> Python 3 - Functions and OOPs - 0.6
+
+Mcqs :-   https://www.mncanswers.site/2022/03/python-3-functions-and-oops-mcqs.html
+
+hands on :-   https://www.pdfcup.com/2022/09/python3-functions-and-oops-hacker-rank.html
+
+
+
+
+
+
+9> NumPy - Python Package for Data -0.6
+
+Mcqs :-   Google , python online compiler
+
+hands on :-  https://www.pdfcup.com/2022/08/numpy-python-package-for-data-science.html
+
+
+
+
+
+10> Stats with Python - 0.5
+
+Mcqs :-   Google , python online compiler
+
+hands on :-   https://www.pdfcup.com/2023/02/stats-with-python-fresco-play-hands-on.html
+
+
+
+
+
+11> Angular 2 Building Blocks - 0.6
+
+Mcqs :-  Google , python online compiler
+
+hands on :-   https://madanswer.com/62502/angular-2-building-blocks-hands-on-solution 
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+12> HTML5 Semantic Elements -0.25
+
+Mcqs :-    https://www.notesbureau.com/2021/08/html-mcqs-answers-fresco-play.html
+
+Hands on :-    https://www.notesbureau.com/2021/07/html5-semantics-elements-fresco-play_4.html
+
+
+
+
+
+
+13> APIGEE - Analytics Services - 0.25
+
+Mcqs :-   https://www.notesbureau.com/2022/06/apigee-analytics-services-fp-mcqs.html
+
+
+
+
+
+14> APIGEE - API Services - 0.25
+ 
+Mcqs :-    https://www.notesbureau.com/2021/08/apigee-api-services-fresco-play-mcqs.html
+
+
+
+
+
+15> Machine Learning - Exploring the Model - 0.25
+
+Mcqs :-  https://www.notesbureau.com/2021/08/machine-learning-exploring-model-fresco.html
+
+
+
+
+
+16> UI Design -0.25
+
+Mcqs :-  https://www.notesbureau.com/2021/07/ui-design-fresco-play-mcqs-answers_11.html
+
+
+
+
+
+17> Styling with CSS3 -0.25
+
+Mcqs :-  https://www.notesbureau.com/2021/07/styling-with-css3-fresco-play-mcqs_5.html
+
+Hands on :-    https://www.notesbureau.com/2021/07/styling-with-css3-fresco-play-hands-on_6.html
+
+
+
+
+
+
+18> React Native - 0.25
+
+Mcqs :-  https://www.mncanswers.site/2021/11/native-react-mcq-solution-tcs-fresco.html
+
+
+
+
+
+19> Java8 Innards -0.25
+
+Mcqs :-  =>  https://madanswer.com/60889/java8-innards-interview-questions-and-answers-from-fresco-play
+              =>  https://crackyourinterview.com/SubCategory-Java8-Innards-Questions.aspx
+
+
+
+
+
+20> Cloud Computing -0.2
+
+Mcqs :-  https://www.notesbureau.com/2021/07/cloud-computing-fresco-play-mcqs-answers_10.html
+
+
+
+
+
+21> Service Discovery -0.2
+
+Mcqs :-  https://www.mncanswers.site/2021/10/service-discovery-mcqs-solution-tcs.html
+
+
+
+
+
+22> Data Visualization Aurora -0.2
+
+Mcqs :-  https://madanswer.com/15237/data-visualisation-aurora
+
+
+
+
+
+23> Purview of Icon Design -0.2
+
+Mcqs :-    https://smartanswer.in/2021/08/purview-of-icon-design-interview-question-answer.html
+
+
+
+
+
+24> Infrastructure as Code -0.2
+
+Mcqs :-    https://www.notesbureau.com/2021/08/infrastructure-as-code-fresco-play-mcqs.html
+
+
+
+
+
+25> Machine Learning Axioms -0.2
+
+Mcqs :-    https://www.notesbureau.com/2021/09/machine-learning-axioms-fresco-play.html
+
+
+
+
+
+
+
+
+
+
