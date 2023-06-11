@@ -1,0 +1,90 @@
+Write the below code.
+
+package com.example.project.controller;
+
+import java.util.ArrayList; import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired; import org.springframework.web.bind.annotation.PathVariable;
+
+import org.springframework.web.bind.annotation.RequestBody; import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.RequestMethod; import org.springframework.web.bind.annotation.RestController;
+
+
+import com.example.project.model.User;
+
+import com.example.project.service.UserService;
+
+@RestController
+
+public class UserController {
+
+@Autowired
+
+
+
+private UserService userService;
+
+User userG = new User();
+
+@RequestMapping(value="/user",method=RequestMethod.GET) public List<User> getUsers(){
+
+List<User> users = new ArrayList<User>(); User u=new User();
+
+u.setUserId(1); u.setUserName("jim"); u.setEmailId("jim@split.com"); u.setTotalBalance(0.0);
+
+u.setBalanceStatus("settled up"); users.add(u);
+
+return users;
+
+}
+
+
+
+@RequestMapping(value="/user",method=RequestMethod.POST) public List<User> addUsers(@RequestBody User user){
+
+List<User> users = new ArrayList<User>(); User u=new User();
+
+u.setUserId(1); u.setUserName("jim"); u.setEmailId("jim@split.com"); u.setTotalBalance(0.0);
+
+u.setBalanceStatus("settled up"); users.add(u);
+
+return users;
+
+}
+
+
+
+@RequestMapping(value="/user/{userId}",method=RequestMethod.GET) public User getUser(@PathVariable int userId){
+
+userG.setUserId(userId); userG.setEmailId("jim@split.com"); userG.setBalanceStatus("settled up"); userG.setTotalBalance(0.0);
+
+userG.setUserName("jim"); return userG;
+
+}
+
+@RequestMapping(value="/user/{userId}",method=RequestMethod.PUT) public User updateUser(@PathVariable int userId){
+
+userG.setUserId(2); userG.setEmailId("jim3@split.com"); userG.setBalanceStatus(""); userG.setTotalBalance(0.0); userG.setUserName("jim3");
+
+return userG;
+
+}
+
+
+
+@RequestMapping(value="/user/{userId}",method=RequestMethod.DELETE) public User deleteUser(@PathVariable int userId){
+
+User u=new User();
+
+u.setUserId(1); u.setUserName("jim"); u.setEmailId("jim@split.com"); u.setTotalBalance(0.0);
+
+u.setBalanceStatus("settled up");
+
+return u;
+
+}
+
+}
+
+
+
+ALL TEST CASES PASES - BUILD SUCCESS

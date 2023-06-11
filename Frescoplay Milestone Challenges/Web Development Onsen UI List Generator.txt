@@ -1,0 +1,79 @@
+Write the below code in App.js.
+
+import React, { Component } from "react"; import {
+
+Page, Button, Toolbar, ListHeader, ListItem, List,
+
+} from "react-onsenui";
+
+// add id='btn-increment' to increment button class App extends Component {
+
+state = { counter: 0,
+
+counterArray: [],
+
+};
+
+onButtonClick = (e) => { console.log(e); this.setState((state) => { return {
+
+counter: state.counter + 1,
+
+counterArray: [...state.counterArray, state.counter + 1],
+
+};
+
+});
+
+};
+
+ 
+
+
+render() { console.log(this.state);
+
+
+return (
+
+<Page renderToolbar={() => (
+
+<Toolbar>
+
+<div className="center">List Generator</div>
+
+</Toolbar>
+
+)}
+
+> 
+
+<Button modifier="large--cta"
+
+onClick={this.onButtonClick} id="btn-increment"
+
+> 
+
+{this.state.counter.toString()}
+
+</Button>
+
+<List dataSource={this.state.counterArray} renderHeader={() => (
+
+<ListHeader style={{ fontSize: 15 }} className="testClass"> NUMBERS
+
+</ListHeader>
+
+)}
+
+renderRow={(row, idx) => <ListItem> {row} </ListItem>}
+
+/>
+
+</Page>
+
+);
+
+}
+
+}
+
+export default App;
