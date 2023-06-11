@@ -1,0 +1,268 @@
+1. The major function of PCA is to decompose a ________________________ into a set of successive orthogonal components
+
+Multivariate dataset
+
+2. Cross validation gives high variance if the testing set and training set are not drawn from the ______________________
+
+Same Population
+
+
+
+3. A normalized image has ___________
+
+Mean = 0 and variance = 1
+
+
+
+4. SIFT is mainly used for images that are ___________
+
+less simpled and less organised
+
+
+
+5. SVD is used in many fields
+
+
+TRUE
+
+
+
+
+6. For SVM it is good to have ___________
+
+number of dimensions > the number of samples
+
+
+
+7. Normalization is the process of converting ___________
+
+pixel values to normal state
+
+
+
+8. The main aim of using SIFT for feature extraction is to obtain features that are very sensitive to changes in scale, rotation, image resolution, illumination, etc.
+
+FALSE
+
+
+
+9. The scale-invariant feature transform can be used to detect and describe local features in images.
+
+TRUE
+
+
+
+10. Each class in CIFAR -10 dataset has _________ images.
+
+6000
+
+
+Image Classification Hands-on Solution
+
+11. The data used to tune the model is _____________
+
+Validation Set
+
+
+
+12. The number of incorrect predictions that the occurrence is negative is False Negative
+
+TRUE
+
+
+
+13. ___________________________ is defined as the percentage of correct predictions
+
+Classification Accuracy
+
+
+
+
+
+14. Naive Bayes algorithm comes under
+
+Deep Learning
+
+
+
+15. In the SVD method, a digital image is decomposed into ________ matrices
+
+3
+
+
+
+
+16. The process of changing the pixel intensity values to achieve consistency in dynamic range for images is ___________.
+
+Image normalization
+
+
+
+17. The steps involved in building a classification model are -
+
+Initialize---->Train---->Predict---> Evaluate
+
+
+
+18. Data Preprocessing is a step the raw data is converted into a form suitable for subsequent analysis
+
+TRUE
+
+
+
+19. The main aim of whitening is to reduce data redundancy
+
+TRUE
+
+
+
+
+Image Classification Hands-on Solution
+
+20. The main aim of using SIFT for feature extraction is to obtain features that are very sensitive to changes in scale, rotation, image resolution, illumination, etc.
+
+FALSE
+
+
+
+
+21. SVM is efficient on
+
+Clear Margin Separation
+
+
+
+
+
+22. Each layer is composed of ___________, where the computation happens
+
+nodes
+
+
+
+23. CIFAR-10 image dataset consists of ____________ training data and _____________ testing data
+
+50k 10k
+
+
+
+24. PCA and SVD are dimensionality reduction techniques
+
+TRUE
+
+
+
+25. Cross Validation is performed on ________________________
+
+Unknown Data
+
+
+
+
+26. ZCA stands for ___________
+
+Zero Phase Component Analysis
+
+
+
+27. ________________________ is the number of correct predictions that the occurrence is positive
+
+False Negative x
+
+
+
+28. In cross validation, the number of samples used for training the model is _____________
+
+decreased
+
+
+
+29. Data Partitioning will help us to know efficiency of model
+
+TRUE
+
+
+
+30. Neural network consists of __________ different layers
+
+3
+
+
+Image Classification Hands-on Solution
+
+
+31. Scikit Learn is an machine learning python package.
+
+True
+
+
+
+32. Allowing training data to be included in testing data will give actual performance results
+
+FALSE
+
+
+
+33. CNN is mainly used in
+
+Image Recognition
+
+
+
+34. SIFT stands for ________________
+
+Scale Invariant Feature Transform
+
+
+
+35. An input image can be converted into structured form through ___________
+
+Image Analysis
+
+
+
+
+36. CNN is a algorithm in which it comes under
+
+Deep Learning
+
+
+
+37. Confusion Matrix is not a technique used to evaluate the performance of a classifier
+
+FALSE
+
+
+
+38. Conventional classification algorithms on image data
+
+could not give significant accuracy
+
+
+
+39. Identify the unstructured data from the following.
+
+Both image and video clip
+
+(getButton) #text=(Image Classification Hands-on Solution) #icon=(link) #color=(#1bc517)
+
+
+40. The major steps involved in image classification are ___________
+
+Input Image -> Preprocessing -> Feature Extraction -> Classification
+
+
+
+
+41. Noise can be removed using Data Preprocessing
+
+TRUE
+
+
+
+42. The data is split into _________ sets
+
+3
+
+(getButton) #text=(Image Classification Hands-on Solution) #icon=(link) #color=(#1bc517)
+
