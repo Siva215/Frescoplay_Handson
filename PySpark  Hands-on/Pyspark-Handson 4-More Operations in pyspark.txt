@@ -1,0 +1,23 @@
+#!/bin/python3
+
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName('handson2').getOrCreate()
+from pyspark.sql import *
+# from pyspark.sql import functions as col
+passanger = Row("ID","Name","Age","Area of Interest")
+
+data1 = passanger("1", "Jack", 22, "Data Science")
+data2 = passanger("2", "Luke", 21, "Data Analytics")
+data3 = passanger("3", "Leo", 24, "Micro Services")
+data4 = passanger("4", "Mark", 21, "Data Analytics")
+passangerData=[data1,data2,data3,data4]
+df = spark.createDataFrame(passangerData)
+
+df_parquet= df.describe(['Age'])
+df_parquet.show()
+
+df_parquet.coalesce(1).write.parquet("/projects/challenge/Age")
+
+df2=df.select(['ID', 'Name', 'Age'] ).sort(['Name'], ascending=False)
+
+df2.coalesce(1).write.parquet("/projects/challenge/NameSorted")

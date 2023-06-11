@@ -1,0 +1,12 @@
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName('PySpark DataFrame From RDD').getOrCreate()
+
+df = spark.read.json("emp.json")
+df.show()
+
+df.coalesce(1).write.parquet("/projects/challenge/Employees")
+df2=spark.read.parquet("Employees")
+
+df1=df2.filter(df2.stream=='JAVA')
+df1.show()
+df1.coalesce(1).write.parquet("/projects/challenge/JavaEmployees")

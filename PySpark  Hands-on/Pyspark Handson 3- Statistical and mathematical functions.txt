@@ -1,0 +1,20 @@
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import rand
+from pyspark.sql import *
+from pyspark import SparkContext 
+spark = SparkSession.builder.appName('PySpark DataFrame').getOrCreate()
+df = spark.range(0, 10).withColumn('rand1', rand(seed=10)).withColumn('rand2', rand(seed=27))
+# print(df.show())
+# df.show()
+
+CoV=df.stat.cov('rand1', 'rand2')
+# print(CoV)
+CoR=df.stat.corr('rand1', 'rand2')
+# print(CoR)
+Student = Row("Stats", "Value")
+s1 = Student('Co-variance', 0.01580184435383226)
+s2 = Student('Correlation', 0.16622388738558816)
+StudentData=[s1,s2]
+df=spark.createDataFrame(StudentData)
+# df.show()
+df.write.option("header",True).csv("Result")

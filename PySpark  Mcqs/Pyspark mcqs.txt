@@ -1,0 +1,156 @@
+Pyspark Final Assessment | Fresco Play
+
+
+Question 1: Which among the following programming languages does Spark support
+
+Answer: All the options
+
+
+
+Question 2: Spark was first coded as a C project
+
+Answer: False
+
+
+
+Question 3: PySpark is built on top of Spark's Java API
+
+Answer: True
+
+
+
+Question 4: SparkContext uses Py4J to launch a JVM and create a
+
+Answer: JavaSparkContext
+
+
+
+Question 5: Which among the following is a/are feature(s) of DataFrames?
+
+Answer: All the options
+
+
+
+Question 6: Which among the following is an example of Transformation
+
+Answer: groupByKey([numPartitions])
+
+
+
+Question 7: Spark SQL can read and write data from Hive Tables
+
+Answer: True
+
+
+
+Question 8: DataFrame is data organized into ______ columns
+
+Answer: named
+
+
+
+Question 9: Parquet stores nested data structures in a flat ________ format
+
+Answer: Columnar
+
+
+
+Question 10: Spark SQL does not provide support for both reading and writing Parquet files
+
+Answer: False
+
+
+
+Question 11: Spark SQL brings native support for SQL to Spark
+
+Answer: True
+
+
+
+Question 12: We cannot pass SQL queries directly to any DataFrame
+
+Answer: False
+
+
+
+Question 13: How to create a table in Hive warehouse programatically from Spark
+
+Answer: spark.sql("CREATE A TABLE IF NOT EXISTS table_name(column_name_1 DataType,column_name_2 DataType,......,column_name_n DataType) USING hivewarehouse")
+
+
+
+Question 14: External tables are used to store data outside the
+
+Answer: Hive
+
+
+
+Question 15: Spark SQL supports reading and writing data stored in Hive
+
+Answer: True
+
+
+
+Question 16: Which among the following is an example of Action
+
+Answer: foreach(func)
+
+
+
+Question 17: Co-Variance of two random columns is near to
+
+Answer: zero
+
+
+
+Question 18: ____________ is a component on top of Spark Core.
+
+Answer: Spark SQL
+
+
+
+Question 19: Registering a DataFrame as a ________ view allows you to run SQL queries over its data.
+
+Answer: Temporary
+
+
+
+Question 20: Hbase is a distributed ________ database built on top of the Hadoop file system.
+
+Answer: Column-oriented
+
+
+
+Question 21: If the schema of the table does not match with the data types present in the file containing the table, then Hive ________
+
+Answer: Reports Null values for mismatched data
+
+
+
+Question 22: Spark was first coded as a C project
+
+Answer: False
+
+
+
+Question 23: Select the correct statement.
+
+Answer: For cluster manager, Spark supports standalone Hadoop YARN
+
+
+
+Question 24: Parallelized collections are created by calling SparkContext’s parallelize method on an existing iterable or collection in driver program.
+
+Answer: True
+
+
+
+Question 25: In PySpark, sorting is in _________ order, by defaul
+
+Answer: ascending
+
+
+
+26. For filtering the data, filter command is used 
+
+TRUE

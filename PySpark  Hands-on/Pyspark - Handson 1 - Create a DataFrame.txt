@@ -1,0 +1,17 @@
+#!/bin/python3
+
+# Put your code here
+from pyspark.sql import SparkSession
+from pyspark.sql import *
+
+spark = SparkSession.builder.appName("Data Frame PASSANGER").config("spark.some.config.option", "some-value").getOrCreate()
+passanger = Row("Name","age","source","destination")
+
+data1 = passanger("David", "22", "London", "Paris")
+data2 = passanger("Steve", "22", "New York", "Sydney")
+passangerData=[data1,data2]
+df = spark.createDataFrame(passangerData)
+df.show()
+
+# Don't Remove this line
+df.coalesce(1).write.parquet("PassengerData")
