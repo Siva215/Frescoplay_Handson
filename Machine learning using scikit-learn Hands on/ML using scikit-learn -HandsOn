@@ -1,0 +1,221 @@
+
+-----------------------
+1. Preprocessing
+#Write your code here
+import sklearn.preprocessing as preprocessing
+import sklearn.datasets
+import numpy as np
+iris=sklearn.datasets. load_iris()
+iris_normal=preprocessing. Normalizer(norm="12").fit(iris.data)
+iris_normalized=iris_normal.transform(iris.data)
+print(iris_normalized.mean(axis=0))
+ohe=preprocessing. OneHotEncoder()
+iris_target_onehotrohe. fit_transform(iris.target.reshape(-1,1))
+print(iris_target_onehot.toarray ( ) [[0,50,100]])
+iris.data[:50, :]=np. nan
+imp=preprocessing. Imputer(missing_values='NaN', strategy='mean')
+iris_imputed=imp.fit_transform(iris.data)
+print(iris_imputed.mean(axis=0))
+ 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Machine Learning Using Scikit-Learn | 3 | Decision Trees ================================================================================
+
+import sklearn.datasets as datasets
+import sklearn.model_selection as model_selection
+import numpy as np
+from sklearn.tree import DecisionTreeRegressor
+
+np.random.seed(100)
+# Load popular Boston dataset from sklearn.datasets module and assign it to variable boston.
+
+boston = datasets.load_boston()
+
+# print(boston)
+
+
+# Split boston.data into two sets names X_train and X_test. Also, split boston.target into two sets Y_train and Y_test
+
+X_train, X_test, Y_train, Y_test = model_selection.train_test_split(boston.data, boston.target,  random_state=30)
+# Print the shape of X_train dataset
+print(X_train.shape)
+
+# Print the shape of X_test dataset.
+print(X_test.shape)
+
+# Build a Decision tree Regressor model from X_train set and Y_train labels, with default parameters. Name the model as dt_reg
+
+dt_Regressor = DecisionTreeRegressor()
+
+dt_reg = dt_Regressor.fit(X_train, Y_train)
+
+print(dt_reg.score(X_train,Y_train))
+
+print(dt_reg.score(X_test,Y_test))
+
+predicted = dt_reg.predict(X_test[:2])
+print(predicted)
+
+# Get the max depth
+
+maxdepth = 2
+maxscore = 0
+for x in range(2, 6):
+     dt_Regressor = DecisionTreeRegressor(max_depth=x)
+     dt_reg = dt_Regressor.fit(X_train, Y_train)
+     score = dt_reg.score(X_test, Y_test)
+     if(maxscore < score):
+         maxdepth = x
+         maxscore = score
+print(maxdepth)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Machine Learning Using Scikit-Learn | 4 | Ensemble Methods
+
+#Write your code here
+import sklearn.datasets
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+import numpy as np
+
+np.random.seed(100)
+boston=sklearn.datasets.load_boston()
+X_train,X_test,Y_train,Y_test=train_test_split(boston.data,boston.target,random_state=30)
+print(X_train.shape)
+print(X_test.shape)
+
+rf_reg=RandomForestRegressor()
+rf_reg=rf_reg.fit(X_train,Y_train)
+print(rf_reg.score(X_train,Y_train))
+print(rf_reg.score(X_test, Y_test))
+
+pred=rf_reg.predict(X_test[:2])
+print(pred)
+
+md=2
+ms=0
+n=100
+for i in range (3,6):
+    dt=RandomForestRegressor(max_depth=i,n_estimators=n)
+    dt=dt.fit(X_train,Y_train)
+    acc=dt.score(X_test,Y_test)
+    if(acc>ms):
+        ms=acc
+        md=i
+print((md,n))
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#### Machine Learning Using Scikit-Learn | 5 | SVM
+#Write your code here
+
+import sklearn.datasets
+import sklearn.preprocessing as preprocessing
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+digits=sklearn.datasets.load_digits()
+X_train,X_test,Y_train,Y_test=train_test_split(digits.data,digits.target,stratify=digits.target,random_state=30)
+print(X_train.shape)
+print(X_test.shape)
+
+svm_clf=SVC()
+svm_clf=svm_clf.fit(X_train,Y_train)
+print(svm_clf.score(X_test,Y_test))
+
+digits_standardized=preprocessing.StandardScaler()
+digits_standardized=digits_standardized.fit(digits.data)
+digits_standardized=digits_standardized.transform(digits.data)
+X_train,X_test,Y_train,Y_test=train_test_split(digits_standardized,digits.target, stratify=digits.target,random_state=30)
+svm_clf2=SVC()
+sym_clf2=svm_clf2.fit(X_train,Y_train)
+print(svm_clf2.score(X_test, Y_test))
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#### Machine Learning Using Scikit-Learn | 6 | Clustering
+
+
+#Write your code here
+import sklearn.datasets
+from sklearn.model_selection import train_test_split
+from sklearn.cluster import KMeans
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.cluster import AffinityPropagation
+from sklearn import metrics
+
+iris=sklearn.datasets.load_iris()
+x_train,x_test,y_train,y_test=train_test_split(iris.data, iris.target, stratify=iris.target, random_state=30)
+
+km_cls=KMeans(n_clusters=3)
+km_cls=km_cls.fit(x_train)
+print(metrics.homogeneity_score(km_cls.predict(x_test),y_test))
+
+age_cls=AgglomerativeClustering(n_clusters=3)
+agg_cls=age_cls.fit(x_train)
+print(metrics.homogeneity_score(agg_cls.fit_predict(x_test),y_test))
+
+af_cls=AffinityPropagation()
+af_cls=af_cls.fit(x_train)
+print(metrics.homogeneity_score(af_cls.predict(x_test),y_test))
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 2. Hands-On KNN
+
+
+#Write your code here
+import sklearn.datasets as dataset
+from sklearn.model_selection import train_test_split
+import numpy as np 
+iris=dataset.load_iris()
+X_train, X_test, Y_train, 
+Y_test=train_test_split(iris.data,iris.target,stratify=iris.target,random_state=30)
+print(X_train.shape)
+print(X_test.shape)
+#from sklearn.neighbors._classification import KNeighborsClassifier
+from sklearn.neighbors import KNeighborsClassifier
+knn_clf= KNeighborsClassifier()
+knn_clf=knn_clf.fit(X_train,Y_train)
+print(knn_clf.score(X_train,Y_train))
+print(knn_clf.score(X_test,Y_test))
+cluster=3
+max_score=0
+best_n_neighbour=0
+while(cluster<=10):
+ knn_clf=KNeighborsClassifier(n_neighbors=cluster)
+ knn_clf=knn_clf.fit(X_train,Y_train)
+ prev_score=max_score
+ max_score=knn_clf.score(X_test,Y_test)
+ if(max_score>prev_score):
+ best_n_neighbour=cluster
+ print(str(cluster),knn_clf.score(X_test,Y_test))
+ 
+ cluster=cluster+1
+print(best_n_neighbour)
+  
+
+******** if code is not work  try this code ***********
+
+import sklearn.datasets as datasets
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+iris = datasets.load_iris()
+X_train, X_test, Y_train, Y_test = train_test_split(iris.data, iris.target, 
+stratify=iris.target, random_state=30)
+print(X_train.shape)
+print(X_test.shape)
+knn_clf = KNeighborsClassifier() 
+knn_clf = knn_clf.fit(X_train, Y_train) 
+print(knn_clf.score(X_train,Y_train))
+print(knn_clf.score(X_test,Y_test))
+ls = []
+prev_score = 0
+n_val = 0
+for i in range(3,11):
+ knn_clf = KNeighborsClassifier(n_neighbors = i)
+ knn_clf = knn_clf.fit(X_train, Y_train)
+ score = knn_clf.score(X_test,Y_test)
+ if prev_score<=score:
+ prev_score = score
+ n_val = i
+print(n_val)
