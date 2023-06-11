@@ -1,0 +1,801 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Count the number of words in text collection, text6, ending with ship?
+
+-- 1
+--
+
+2. What is the total number of words present in text collection, text6, while Considering characters too as
+
+words. -----
+
+16967
+
+-----
+3. What is the frequency of word 'ARTHUR' in text collection text6?
+
+--- 225
+---
+
+4. What is the frequency of word 'ARTHUR' in text collection text6?
+
+------ 0.0132
+------
+5. Which of the following modules is used for performing Natural language processing in python?
+
+----
+nltk
+
+----
+
+6. How many times does the word 'BROTHER' occur in text collection text6?
+
+-- 4
+--
+
+7. What is range of length of words present in text collection text6?
+
+-------
+
+1 to 13
+
+
+-------
+
+8. How many times each unique word of text6 collection is repeated on an average?
+
+---------
+
+7.8 times
+
+---------
+
+9. What is the total number of unique words present in text collection, text6, while Considering
+characters too as words
+
+What is the total number of unique words present in text collection, text6? Considering characters too as words
+
+---- 2166
+
+
+10. Count the number of words in text collection, text6, which have only digits as characters?
+
+-- 24
+--
+
+11. Which of the following expression is used to download all the required corpus and
+collections , related to NLTK Book ?
+
+---------------------
+
+nltk.download('book')
+
+---------------------
+
+12. Which of the following is a Text corpus structure?
+
+
+----------------------
+
+All of those mentioned
+
+----------------------
+
+13. Which of the following NLTK corpus represents a collection US presiential inaugural addresses, starting from 1789?
+
+Which of the following NLTK corpus represent a collection US presidential inaugural addresses, starting from 1789?
+
+---------
+
+inaugural
+
+14. Which of the following method can be used to determine the number of text collection files associated with a corpus?
+
+---------
+
+fileids()
+
+---------
+
+
+15. In how many number of categories, are all text collections of brown corpus grouped into?
+
+-- 15
+--
+
+16. Which of the following class is used to convert your own collections of text into a corpus?
+
+---------------------
+
+PlaintextCorpusReader
+
+---------------------
+
+17. What are the categorioes to which the text collection test/16438, of reuters corpus is tagged to ?
+
+--------------
+
+crude, nat-gas
+
+--------------
+
+18. Which of the following NLTK corpus represents a collection of around 10000 news articles? Which of the following NLTK corpus represent a collection of around 10000 news articles?
+
+-------
+
+reuters
+
+-------
+
+19. Which of the following method is used to determine the number of characters present in a corpus?
+
+-----
+
+raw()
+
+-----
+
+
+20. Which of the following expression imports genesis corpus into the working environment?
+
+-------------------------------
+
+from nltk.corpus import genesis
+
+-------------------------------
+
+21. Which of the following method can be used to determine the location of a text collection, associated with a corpus?
+
+---------
+
+abspath()
+
+---------
+22. Which of the following class is used to determine count of all tokens present in text collections, grouped by a specific condition ?
+
+
+Which of the following class is used to determine the count of all tokens present in text collections, grouped by a specific condition?
+
+-------------------
+
+ConditionalFreqDist
+
+-------------------
+
+23. Which of the following class is used to determine count of all tokens present in a given text
+?
+
+--------
+
+FreqDist
+
+--------
+
+24. Which of the following method is used, on a conditional frequency distribution, in order to display frequency of few samples derived under few conditions?
+
+----------
+
+tabulate()
+
+----------
+
+
+25. How many times do the word sugar occur in text collections, grouped into genre 'sugar'? Consider reuters corpus.
+
+How many times does the word sugar occur in text collections, grouped into genre 'sugar'? Consider reuters corpus.
+
+--- 521
+---
+
+26. How many times do the words tonnes and year occur in text collections, grouped into genre sugar? Consider reuters corpus.
+
+How many times does the words tonnes and year occur in text collections, grouped into genre sugar? Consider reuters corpus.
+
+-------- 355, 196
+--------
+
+27. How many times do the words lead and smelter occur in text collections, grouped into genre zinc? Consider reuters corpus.
+
+How many times does the words lead and smelter occur in text collections, grouped into genre zinc? Consider reuters corpus.
+
+------ 40, 33
+------
+
+28. How many times do the word zinc occur in text collections, grouped into genre 'zinc'? Consider reuters corpus.
+
+How many times does the word zinc occur in text collections, grouped into genre 'zinc'? Consider reuters corpus.
+
+-- 70
+--
+
+29. Which of the following method is used to view the conditions, which are used while computing conditional frequency distributions?
+
+------------
+
+conditions()
+
+------------
+
+30. How many times do the words gasoline and barrels occur in text collections, grouped into genre gas? Consider reuters corpus.
+
+How many times does the words gasoline and barrels occur in text collections, grouped into genre gas? Consider reuters corpus.
+
+------ 77, 64
+------
+
+31. How many times do the word gas occur in text collections, grouped into genre 'gas'? Consider reuters corpus.
+
+How many times does the word gas occur in text collections, grouped into genre 'gas'? Consider reuters corpus.
+
+-- 10
+--
+
+32. What is the output of the following code? s = 'Python is cool!!!' print(re.findall(r'\s\w+\b', s))
+-------------
+
+['is','cool']
+
+-------------
+
+33. The process of breaking text into words and punctuation marks in known as .....?
+
+------------
+
+Tokenization
+
+------------
+
+34. Which of the following class is used to convert a list of tokens into NLTK text?
+
+---------
+
+nltk.Text
+
+---------
+
+35. What is the number of sentences obtained after breaking 'Python is cool!!!' into sentences using sent_tokenize?
+
+-- 2
+--
+
+36. Which of the following method is used to tokenize a text based on a regular expression?
+
+-----------------
+
+regexp_tokenize()
+-----------------
+
+37. Which of the following function is used to break given text into sentences?
+
+-------------
+
+sent_tokenize
+
+-------------
+
+38. Which of the following module can be used to read text data from a pdf document?
+
+-----
+
+pypdf
+
+-----
+
+39. How many number of words are obtained when the sentence Python is cool!!! is tokenized into words, with regular expression r'\w+' ?
+
+-- 3
+--
+
+40. Which of the following module is used to download text from a HTML file?
+
+------
+
+urllib
+
+------
+
+41. How many number of words are obtained when the sentence Python is cool!!! is tokenized into words?
+
+-- 6
+--
+
+42. What is the frequency of bigram ('BLACK', 'KNIGHT') in text collection text6?
+
+-- 32
+--
+
+43. What is the frequency of bigram ('clop', 'clop') in text collection text6?
+
+-- 26
+--
+
+44. Which of the following function is used to obtain set of all pair of consecutive words appearing in a text?
+
+---------
+
+bigrams()
+
+---------
+45. Which of the following word occurs frequently after the word FRENCH in text collection text6?
+
+----- GUARD
+-----
+
+46. What is the frequency of bigram ('HEAD', 'KNIGHT') in text collection text6?
+
+-- 29
+--
+
+47. Which of the following word occurs frequently after the word Holy in text collection text6?
+
+-----
+
+Grail
+
+-----
+
+48. Which of the following function is used to generate a set of all possible n consecutive words appearing in a text?
+
+--------
+
+ngrams()
+
+--------
+
+49. How many trigrams are possible from the sentence Python is cool!!!?
+
+--
+4
+
+--
+
+50. What is the frequency of bigram ('King', 'Arthur') in text collection text6?
+
+-- 16
+--
+
+51. Which of the following is not a collocation, associated with text6? Which of the following is not a collocation, associated with text6 ?
+--------------
+
+Straight Table
+
+--------------
+
+52. What is the output of the following expression? import nltk
+lancaster = nltk.LancasterStemmer() print(lancaster.stem('power')
+---
+
+pow
+
+---
+
+53. How many words are ending with 'ing' in text collection text6?
+--- 281
+---
+
+54. How many words are ending with 'ly' in text collection text6?
+
+--- 109
+---
+
+55. What is the output of the following expression? import nltk
+porter = nltk.PorterStemmer()
+
+print(porter.stem('lying'))
+
+---
+
+lie
+
+---
+
+56. What is the output of the following expression? import nltk
+lancaster = nltk.LancasterStemmer() print(lancaster.stem('basics'))
+---
+
+bas
+
+---
+
+57. The process of removing suffixes of words is known as .
+
+--------
+
+stemming
+
+--------
+
+58. What is the output of the following expression? import nltk
+porter = nltk.PorterStemmer()
+
+print(porter.stem('ceremony'))
+
+--------
+
+ceremoni
+
+--------
+
+59. What is the output of the following expression? import nltk
+lancaster = nltk.LancasterStemmer() print(lancaster.stem('lying'))
+-----
+
+lying
+
+-----
+
+60. What is the output of the following expression?
+import nltk
+
+wnl = nltk.WordNetLemmatizer() print(wnl.lemmatize('women'))
+-----
+
+woman
+
+-----
+
+61. What is the output of the following expression? import nltk
+lancaster = nltk.LancasterStemmer()
+
+print(lancaster.stem('women'))
+
+---
+
+wom
+
+---
+
+62. Which of the following method is used to view the tagged words of text corpus?
+
+--------------
+
+tagged_words()
+
+--------------
+
+63. The process of labelling words into parts of speech is known as ?
+
+-----------
+
+POS Tagging
+
+-----------
+
+64. Which of the following class is used to create a default tagger?
+
+---------------
+
+DefaultTagger()
+
+---------------
+
+65. What is the output of the following expression? s = 'Python is awesome' print(nltk.pos_tag(nltk.word_tokenize(s)))
+------------------------------------------------
+
+[('Python','NNP'),('is','VBZ'),('awesome','JJ')]
+
+------------------------------------------------
+
+66. What is the output of the following code? import nltk
+tagged_token = nltk.tag.str2tuple('fly/NN')
+
+print(tagged_token)
+
+------------ ('fly','NN')
+------------
+
+67. Which tag occurs maximum in text collections associated with news genre of brown corpus?
+
+--
+NN
+
+--
+
+68. Which of the following function is used to tag parts of speech to words appearing in a text?
+
+---------
+
+pos_tag()
+
+---------
+
+69. Which of the following class is used to define tagging using regular expressions?
+
+--------------
+
+regexpTagger()
+
+--------------
+
+70. Is it possible to combine Taggers. State if it is true or false?
+
+----
+
+True
+
+----
+
+71. How many times does the tag AT is associated with the word The in brown corpus?
+
+---- 6725
+----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
