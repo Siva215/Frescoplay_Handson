@@ -1,0 +1,53 @@
+import java.io.*;
+import java.util.*;
+
+class Employee
+{
+    // WRITE CODE OF CONSTRUCTOR 
+    
+    String name;
+    int id;
+    int age;
+    public Employee(String name,int id,int age){
+        this.name = name;
+        this.id = id;
+        this.age = age;
+    }
+}
+
+class SortEmployees 
+{
+    void sortEmployees(ArrayList<Employee> empList) 
+    {
+        // LAMBDA EXPRESSION CODE
+        Collections.sort(empList,(o1,o2) -> o1.name.compareTo(o2.name));
+        for(Employee x:empList)
+        {
+            System.out.println(x.name+" "+x.id+" "+x.age);
+        }
+        
+        
+    }
+}
+
+public class SortEmployeesMain
+{
+    public static void main(String[] args) throws Exception
+    {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		ArrayList<Employee> empList=new ArrayList<>();
+		
+		 int n=Integer.parseInt(br.readLine().trim());
+		 for(int i=0;i<n;i++)
+		 {
+			 String inp=br.readLine();
+	         String inparr[]=inp.split(" ");
+			 
+			 Employee ws=new Employee(inparr[0],Integer.parseInt(inparr[1]), Integer.parseInt(inparr[2]));
+			 empList.add(ws);
+		 }
+		
+		SortEmployees s1=new SortEmployees();
+		s1.sortEmployees(empList);
+    }
+}
