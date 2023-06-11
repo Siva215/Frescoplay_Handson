@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        Scanner scanner = new Scanner(System.in);
+        HashMap<Integer,String> hash = new HashMap<>();
+        int n = scanner.nextInt(); 
+        scanner.nextLine();
+        while(n>0){
+            String str =scanner.nextLine();
+            String s[] = str.split(" ");
+            hash.put(Integer.parseInt(s[0]), s[1]);
+            n--;
+        }
+        int k = scanner.nextInt();
+        if(hash.containsKey(k)){
+            System.out.println(hash.get(k));
+        }
+        else{
+            System.out.println("-1");
+        }
+    }
+}

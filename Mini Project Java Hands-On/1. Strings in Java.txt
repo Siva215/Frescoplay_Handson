@@ -1,0 +1,30 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Solution{
+    
+    public static int charSearch(String str,char ch){
+        //complete the code
+        char[] array = str.toCharArray();
+        int count = 0;
+        for(int i=0;i<str.length();i++){
+            if(array[i] == ch){
+                count++;
+            }
+        }
+        return count;
+    }
+
+public static void main(String[] args) throws IOException {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+		String str = reader.readLine();
+		char ch = (char)reader.read();
+		
+		System.out.println(charSearch(str,ch));
+		
+		
+
+	}
+}
