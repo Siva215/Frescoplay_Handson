@@ -1,0 +1,29 @@
+File Name: index.html
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="icon" href="favicon.png" type="image/png">
+
+<title>Destiny</title>
+
+<link href="mystyle.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<header>
+
+<a><h1>WELCOME TO MY PAGE<h1></a>
+
+</header>
+
+</body>
+
+</html>

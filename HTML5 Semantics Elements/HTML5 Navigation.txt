@@ -1,0 +1,31 @@
+File Name: index.html
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link href="mystyle.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<nav>
+
+<a>HOME</a> |
+
+<a>Blog</a> |
+
+<a>Videos</a> |
+
+<a>About Me</a>
+
+</nav>
+
+</body>
+
+</html>

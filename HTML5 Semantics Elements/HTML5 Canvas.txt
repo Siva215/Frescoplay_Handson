@@ -1,0 +1,45 @@
+File Name: index.html
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="icon" href="favicon.png" type="image/png">
+
+<title>Destiny</title>
+
+<link href="mystyle.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<canvas id="GFG"
+
+width="600"
+
+height="400">
+
+</canvas>
+
+<script>
+
+var x =
+
+document.getElementById("GFG");
+
+var ctx = x.getContext("2d");
+
+ctx.strokeRect(20, 20, 200, 100);
+
+ctx.stroke();
+
+</script>
+
+</body>
+
+</html>
