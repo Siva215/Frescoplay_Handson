@@ -1,0 +1,68 @@
+#!/bin/python3
+
+# Write your code here
+import pandas as pd
+import numpy as np
+
+#Task 1
+# Create a Series named heights_A with values 176.2, 158.4, 167.6, 156.2 and 161.4.
+# These values represent the height of 5 students of class A.
+#   * Label each student as s1, s2, s3, s4, s5.
+#   * Determine the shape of height_A and display it.
+#
+
+heights_A = pd.Series([176.2,158.4,167.6,156.2,161.4])
+heights_A.index = ['s1','s2','s3','s4','s5']
+print(heights_A.shape)
+
+
+# TASK 2
+# Create another series named weights_A with values 85.1, 90.2, 76.8, 80.4, 78.9.
+#   * Label each students as s1, s2, s3, s4, s5.
+#   * Determine data type of values in weights_A and display it.
+#
+weights_A = pd.Series([85.1,90.2,76.8,80.4,78.9])
+weights_A.index = ['s1','s2','s3','s4','s5']
+print(weights_A.dtype)
+
+# TASK 3
+# Create a dataframe named df_A, which contains the heights and weights of five students namely s1,s2,s3,s4,s5.
+#   * Label the Columns as Student_height and Student_weight, respectively.
+#   * Display the shape of df_A.
+#
+df_A = pd.DataFrame()
+df_A['Student_height'] = heights_A
+df_A['Student_weight'] = weights_A
+print(df_A.shape)
+
+# TASK 4
+# Create another series named heights_B from a 1-D numpy array of 5 elements derived from the normal distribution of mean 170.0 and standard derivation 25.0.
+#   * Set random seed to 100 before creating the heights_B series.
+# Create another series named weights_B from 1-D numpy array of 5 elements derived from the normal distribution of mean 75.0 and standard deviation 12.0.
+#   * Set random seed to 100 before creating the weights_B series.
+# 
+#   Label both series elements as s1,s2,s3,s4,s5
+#   Print the mean of series heights_B.
+
+my_mean = 170.0
+my_std = 25.0
+np.random.seed(100)
+heights_B = pd.Series(np.random.normal(loc = my_mean, scale = my_std, size = 5))
+heights_B.index = ['s1','s2','s3','s4','s5']
+
+my_mean1 = 75.0
+my_std1 = 12.0
+weights_B = pd.Series(np.random.normal(loc = my_mean1,scale = my_std1,size = 5))
+weights_B.index = ['s1','s2','s3','s4','s5']
+print(heights_B.mean())
+
+# TASK 5
+# Create a dataframe df_B containing the height and weight of students s1,s2,s3,s4,s5 belonging to class B.
+#   * Label the column as Student_height and Student_weight respectively.
+#   * Display the column names of db_B.
+#   * Use the heights_B and weights_B series created in the above tasks.
+#
+df_B = pd.DataFrame()
+df_B['Student_height'] = heights_B
+df_B['Student_weight'] = weights_B
+print(df_B.columns)

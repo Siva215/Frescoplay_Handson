@@ -1,0 +1,113 @@
+#!/bin/python3
+
+
+#Write your code here
+
+import pandas as pd
+import numpy as np
+
+# Task 1
+# Create a Series named heights_A with values 176.2, 158.4, 167.6, 156.2 and 161.4.
+# These values represent the Height of 5 students of class A.
+#   * Label each student as s1, s2, s3, s4, s5.
+
+# Create another series named weights_A with values 85.1, 90.2, 76.8, 80.4, 78.9.
+# These values represent the Weight of 5 students of class A.
+#   * Label each students as s1, s2, s3, s4, s5.
+#
+# Create a dataframe named df_A, which contains the heights and weights of five students namely s1,s2,s3,s4,s5.
+#   * Label the Columns as Student_height and Student_weight, respectively.
+#   * Write the Contents of df_A to a CSV file named classA.csv.
+#
+
+heights_A = pd.Series([176.2,158.4,167.6,156.2,161.4])
+heights_A.index = ['s1','s2','s3','s4','s5']
+
+weights_A = pd.Series([85.1,90.2,76.8,80.4,78.9])
+weights_A.index= ['s1','s2','s3','s4','s5']
+
+d={
+ "Student_height":heights_A,
+   "Student_weight":weights_A
+
+}
+
+df_A=pd.DataFrame(d)
+df_A.to_csv('classA.csv')
+
+
+# Task 2
+# Read the contents of the CSV file, classA.csv into a dataframe named df_A2.
+# Display the dataframe df_A2.
+#
+
+df_A2=pd.read_csv("classA.csv")
+print(df_A2)
+
+# Task 3 
+# Read the contentsof the CSV file classA.csv into a dataframe named df_A3, such that the first column data values are treated as index to df_A3.
+# Display the dataframe df_A3.
+#
+df_A3=pd.read_csv("classA.csv", index_col=0)
+print(df_A3)
+
+# Task 4
+# Create another series named height_B from a 1-D numpy array of 5 elements derived from the normal distribution of mean 170.0 and standard deviation 25.0.
+#   * Set random seed to 100 before creating heights_B series.
+# Create another series named weight_B from a 1-D numpy array of 5 elements derived from the normal distribution of mean 75.0 and standard deviation 12.0.
+#   * Set random seed to 100 again before creating Weights_B series.
+#
+# Label both series elements as s1, s2, s3, s4, s5.
+# Create a dataframe named df_B, which contains the heights and weights of five students s1,s2,s3,s4,s5 belonging to class B.
+#   * Label the Columns as Student_height and Student_weight, respectively.
+#   * Write the Contents of df_B without the index to a CSV file named classB.csv.
+#   * Display the contents of classB.csv using the command "cat classB.csv".
+
+
+m=170.0
+sd=25.0
+np.random.seed(100)
+
+heights_B= pd.Series(np.random.normal(loc=m, scale=sd,size=5))
+heights_B.index=['s1','s2','s3','s4','s5']
+
+
+m2=75.0
+sd2=12.0
+np.random.seed(100)
+
+weights_B= pd.Series(np.random.normal(loc=m2, scale=sd2,size=5))
+weights_B.index=['s1','s2','s3','s4','s5']
+
+d2={
+    
+     "Student_height":heights_B,
+   "Student_weight":weights_B
+}
+df_B= pd.DataFrame(d2)
+df_B.to_csv('classB.csv' , index=False)
+#print("classB.csv")
+
+
+# Task 5
+# Read the data from the classB.csv file into a dataframe df_B2.
+# Display the dataframe df_B2.
+#
+
+df_B2=pd.read_csv("classB.csv")
+print(df_B2)
+
+# Task 6
+# Read data from the classB.csv file into a dataframe df_B3, such that the argument header of read_csv is set to None. When the header is set to None, data is read assuming there is no header in the input CSV file.
+# Display the dataframe df_B3.
+#
+
+df_B3=pd.read_csv("classB.csv", header=None)
+print(df_B3)
+
+# Task 7
+# Read data from the classB.csv file into a dataframe df_d4, such that the argument header of read_csv is set to None, and argument skiprows is set to 2.
+# Display the dataframe df_B4.
+#
+df_B4=pd.read_csv("classB.csv",  header=None , skiprows=2)
+print(df_B4)

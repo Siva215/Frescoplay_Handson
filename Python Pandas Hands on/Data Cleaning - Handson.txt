@@ -1,0 +1,46 @@
+#!/bin/python3
+
+#Write your code here
+import pandas as pd
+import numpy as np
+
+# Task 1:
+# Create a series named height_A with values 176.2,158.4,167.6,156.2,161.4. These values represent heights of 5 students of class A.
+# Label each student as s1, s2, s3, s4, s5.
+#
+heights_A = pd.Series([176.2,158.4,167.6,156.2,161.4])
+heights_A.index = ['s1','s2','s3','s4','s5']
+
+# Task 2:
+# Create another series named weights_A with values 85.1, 90.2, 76.8, 80.4, 78.9.
+# These values represent the Weight of 5 students of class A.
+#   * Label each students as s1, s2, s3, s4, s5.
+#
+weights_A = pd.Series([85.1,90.2,76.8,80.4,78.9])
+weights_A.index= ['s1','s2','s3','s4','s5']
+
+
+# Task 3:
+# Create a dataframe named df_A which contains the height and weight of five students namely s1, s2, s3, s4, s5.
+#   * Label the Columns as Student_height and Student_weight, respectively.
+#   * Set height and weight values of student s3 to NaN.
+#   * Set the weight of s5 to NaN.
+#   * Drop the rows having null values in any of the columns, and assign the result to df_A2. 
+
+my_dataframe={
+  "Student_height":heights_A,
+  "Student_weight":weights_A
+
+}
+
+df_A=pd.DataFrame(my_dataframe)
+
+df_A.loc["s3"] = np.nan
+
+df_A.loc["s5"][1]=np.nan
+
+df_A2= df_A.dropna(how="any") # df_A2= df_A.dropna(axis="rows")
+
+# Task 4:
+# Display the dataframe df_A2.
+print(df_A2)
