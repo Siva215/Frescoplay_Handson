@@ -1,0 +1,139 @@
+#
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+# Task 1:
+def generate_plot_with_style1():
+    # Write your functionality below
+
+    # Create a function barplot with 'ggplot' style. Use 'with' to apply the style to the code generating the barplot.
+    with plt.style.context(['ggplot']):
+
+        # Create a figure of size 9 inches in width, and 7 inches in height. Name it as fig.
+        fig = plt.figure(figsize=(9, 7))
+
+        # Create an axis, associated with figure fig, using add_subplot. Name it as ax.
+        ax = fig.add_subplot(111)
+
+        # Define the Following lists:
+        sepal_len = [6.01, 6.94, 7.59]
+        sepal_wd = [4.42, 3.77, 3.97]
+        petal_len = [2.46, 5.26, 6.55]
+        petal_wd = [1.24, 2.33, 3.03]
+        species = ['setosa', 'versicolor', 'virginica']
+        species_index1 = [0.8, 1.8, 2.8]
+        species_index2 = [1.0, 2.0, 3.0]
+        species_index3 = [1.2, 2.2, 3.2]
+        species_index4 = [1.4, 2.4, 3.4]
+
+        # Draw vertical bars showing mean sepal length of a species. Set width of the bars as 0.2, and label it as Sepal Length.
+        # Use bar with species_index1 and sepal_len.
+
+        ax.bar(species_index1, sepal_len, width=0.2, label='Sepal Length')
+
+        # Draw vertical bars showing mean sepal length of a species. Set width of the bars as 0.2, and label it as Sepal Width.
+        # Use bar with species_index2 and sepal_wd.
+
+        ax.bar(species_index2, sepal_wd, width=0.2, label='Sepal Width')
+
+        # Draw vertical bars showing mean sepal length of a species. Set width of the bars as 0.2, and label it as Petal Length.
+        # Use bar with species_index3 and petal_len.
+
+        ax.bar(species_index3, petal_len, width=0.2, label='Petal Length')
+
+        # Draw vertical bars showing mean sepal length of a species. Set width of the bars as 0.2, and label it as Petal Width.
+        # Use bar with species_index4 and petal_wd.
+        ax.bar(species_index4, petal_wd, width=0.2, label='Petal Width')
+
+        # Label X-Axis as Species.
+        # Label Y-Axis as Iris Measurements (cm)
+        # Set Title as 'Mean Measurements of Ires Species'
+        # Limit X-Axis from 0.5 to 3.7
+        # Limit Y-Axis from 0 to 10.
+
+        ax.set(title='Mean Measurements of Ires Species',
+               xlabel='Species', ylabel='Iris Measurements (cm)',
+               xlim=(0.5, 3.7), ylim=(0, 10))
+
+        # Mark major ticks on X-Axis at 1.0,2.0, and3.0.
+        # Label the major ticks on X-Axis as setosa, versicolor, and virginica respectively.
+        ax.set_xticks([1.0, 2.0, 3.0])
+        ax.set_xticklabels(species)
+
+    return fig
+
+
+# Task 2:
+def generate_plot_with_style2():
+    # Write your functionality below
+
+    # Regenerate the barplot defined in 'generate_plot_with_style1' using 'seaborn-colorblind' style.
+    # Use 'with' for applying the style.
+    with plt.style.context(['seaborn-colorblind']):
+        fig = plt.figure(figsize=(9, 7))
+        ax = fig.add_subplot(111)
+
+        sepal_len = [6.01, 6.94, 7.59]
+        sepal_wd = [4.42, 3.77, 3.97]
+        petal_len = [2.46, 5.26, 6.55]
+        petal_wd = [1.24, 2.33, 3.03]
+        species = ['setosa', 'versicolor', 'virginica']
+        species_index1 = [0.8, 1.8, 2.8]
+        species_index2 = [1.0, 2.0, 3.0]
+        species_index3 = [1.2, 2.2, 3.2]
+        species_index4 = [1.4, 2.4, 3.4]
+
+        # Limit X-Axis from 0.5 to 3.5
+        ax.set(title='Mean Measurements of Ires Species',
+               xlabel='Species', ylabel='Iris Measurements (cm)',
+               xlim=(0.5, 3.5), ylim=(0, 10))
+
+        ax.bar(species_index1, sepal_len, width=0.2, label='Sepal Length')
+        ax.bar(species_index2, sepal_wd, width=0.2, label='Sepal Width')
+        ax.bar(species_index3, petal_len, width=0.2, label='Petal Length')
+        ax.bar(species_index4, petal_wd, width=0.2, label='Petal Width')
+        ax.set_xticks([1.0, 2.0, 3.0])
+        ax.set_xticklabels(species)
+
+    return fig
+
+
+# Task 3:
+def generate_plot_with_style3():
+    # Write your functionality below
+
+    # Regenerate the barplot defined in 'generate_plot_with_style1' using 'grayscale' style.
+    # Use 'with' for applying the style.
+    with plt.style.context(['grayscale']):
+        fig = plt.figure(figsize=(9, 7))
+        ax = fig.add_subplot(111)
+
+        sepal_len = [6.01, 6.94, 7.59]
+        sepal_wd = [4.42, 3.77, 3.97]
+        petal_len = [2.46, 5.26, 6.55]
+        petal_wd = [1.24, 2.33, 3.03]
+        species = ['setosa', 'versicolor', 'virginica']
+        species_index1 = [0.8, 1.8, 2.8]
+        species_index2 = [1.0, 2.0, 3.0]
+        species_index3 = [1.2, 2.2, 3.2]
+        species_index4 = [1.4, 2.4, 3.4]
+
+        # Limit X-Axis from 0.5 to 3.5
+        ax.set(title='Mean Measurements of Ires Species',
+               xlabel='Species', ylabel='Iris Measurements (cm)',
+               xlim=(0.5, 3.5), ylim=(0, 10))
+
+        ax.bar(species_index1, sepal_len, width=0.2, label='Sepal Length')
+        ax.bar(species_index2, sepal_wd, width=0.2, label='Sepal Width')
+        ax.bar(species_index3, petal_len, width=0.2, label='Petal Length')
+        ax.bar(species_index4, petal_wd, width=0.2, label='Petal Width')
+        ax.set_xticks([1.0, 2.0, 3.0])
+        ax.set_xticklabels(species)
+
+    return fig
+    
+    # Refer '__main__' method code which is given below if required.
+    
+if __name__ == '__main__':

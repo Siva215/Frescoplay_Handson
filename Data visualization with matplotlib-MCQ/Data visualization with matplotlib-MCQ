@@ -1,0 +1,29 @@
+Which of the following value creates triangle markers, pointing left wards? : <
+Which of the following type of values can be passed to color argument of plot function? :All of those mentioned
+Multiple lines can be plotted using a single plot function? :True
+What does the expression plot(x, y, bo) do ?:Plots blue colored circle markers
+Which of the following parameter is used to draw shadow behind the pie plot?:shadow
+What is the purpose for which linewidth parameter is used in a bar function?:For specifying width of edges, drawn on bars 
+Which of the following parameter is used to set the color of a error bar in bar plots?:ecolor
+Which of the following parameter is used to set the direction of drawing fractions, in a pie plot?:counterclock
+Which of the following functions is used to create horizontal bar plots?:barh
+What does the function boxplot return?:dict
+
+
+
+
+
+Which of the following statements is correct, based on figure generated with below code?
+
+import matplotlib.pyplot as plt
+fig = plt.figure()
+ax = fig.add_subplot(111, title="My Plot")
+x = [0, 1, 2, 3, 4]
+y = [0, 3, 6, 9, 12]
+plt.scatter(x, y, s=[20, 60], c=['r', 'g'])
+plt.show()
+
+ANS: Results in Error
+
+
+

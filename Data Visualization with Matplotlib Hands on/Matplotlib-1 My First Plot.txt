@@ -1,0 +1,39 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def test_the_plot():
+    # Write your functionality below
+
+    # Create a figure of size 12 inches in width, and 6 inches in height. Name it as fig.
+    fig = plt.figure(figsize=(12, 6))
+
+    # Create an axis, associated with figure fig, using add_subplot. Name it as ax.
+    ax = fig.add_subplot(111)
+
+    # Create a list t with values [7, 14, 21, 28, 35]
+    t = [7, 14, 21, 28, 35]
+
+    # Create a list d with values [i*6 for i in t]
+    d = [i*6 for i in t]
+    x = t
+    y = d
+
+    # Draw a line, by plotting t values on X-Axis and d values on Y-Axis. Use the plot function. Label the line as d = 6t.
+    plt.plot(x, y, label='d = 6t')
+
+    # Label X-Axis as time (second). Label Y-Axis as distance(meters).
+    # Set Title as 'Time vs Distance Covered'
+    # Limit data points on X-Axis from 0 to 40.
+    # Limit data points on Y-Axis from 0 to 220.
+    ax.set(title='Time vs Distance Covered', xlabel='time (seconds)',
+           ylabel="distance (meters)", xlim=(0, 40), ylim=(0, 220))
+
+    plt.legend()
+    return fig
+    
+    # Refer '__main__' method code which is given below if required.
+   
+   
+   
+if __name__ == '__main__':

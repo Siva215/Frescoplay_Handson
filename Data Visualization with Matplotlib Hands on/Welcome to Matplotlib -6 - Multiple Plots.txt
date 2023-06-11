@@ -1,0 +1,169 @@
+# 
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+
+# Task 1:
+def generate_figure1():
+
+    # Write your functionality below
+
+    # Define a numpy array 'x' with expression 'np.arrange(0.0,10.0, 0.01)'
+    x = np.arange(0.0, 10.0, 0.01)
+
+    # Define another numpy array 'arr_s1' with expression 'np.sin(3*np.pi*x)'
+    arr_s1 = np.sin(3*np.pi*x)
+
+    # Define another numpy array 'arr_s2' with expression 'np.sin(6*np.pi*x)'
+    arr_s2 = np.sin(6*np.pi*x)
+
+    # Create figure of size 12 inches in width, and 7 inches in hight. Name it as fig.
+    fig = plt.figure(figsize=(12, 7))
+
+    # Create an axes, using plt.subplot function. Name it as axes1.
+    # The subplot must point to the first virtual grid created by 2 rows and 1 columns.
+    # Set 'title' argument to 'Sin(3*pi*x)'.
+    axes1 = plt.subplot(2, 1, 1, title='Sin(3*pi*x)')
+
+    # Draw a line plot of 'x' and 'arr_s1' using the 'plot' function on 'axes1'.
+    axes1.plot(x, arr_s1)
+
+    # Create another axes, using plt.subplot function. Name it as axes2.
+    # The subplot must point to the second virtual grid created by 2 rows and 1 columns.
+    # Set 'title' argument to 'Sin(6*pi*x)'. Set 'sharex' argument to 'axes1' and 'sharey' to 'axes1'.
+    axes2 = plt.subplot(2, 1, 2, title='Sin(6*pi*x)', sharex=axes1, sharey=axes1)
+
+    # Draw a line plot of 'x' and 'arr_s2' using the 'plot' function on 'axes2'.
+    axes2.plot(x, arr_s2)
+
+    return fig
+
+
+# Task 2:
+def generate_figure2():
+
+    # Write your functionality below
+
+    # Set random seed to 1500 using the expression 'np.random.seed(1500)'.
+    np.random.seed(1500)
+
+    # Define a numpy array 'x' with expression 'np.random.rand(10)'
+    x = np.random.rand(10)
+
+    # Define another numpy array 'y' with expression 'np.random.rand(10)'
+    y = np.random.rand(10)
+
+    # Define one more numpy array 'z' with expression 'np.sqrt(x**2 + y*2)'
+    z = np.sqrt(x**2 + y**2)
+
+    # Create a figure of size 9 inches in width, and 7 inches in height. Name it as fig.
+    fig = plt.figure(figsize=(9, 7))
+
+    # Create an axes, using plt.subplot function. Name it as axes1.
+    # The subplot must point to the first virtual grid created by 2 rows and 2 columns.
+    # Set 'title' argument to 'Scatter plot with Diamond Markers'.
+    axes1 = plt.subplot(2, 2, 1, title='Scatter plot with Diamond Markers')
+
+    # Draw a scatter plot of 'x' and 'y' using 'scatter' function on 'axes1'.
+    # Set arguement 's' to 80, 'c' to z and 'marker' to 'd'.
+    axes1.scatter(x, y, s=80, c=z, marker="d")
+
+    # Add ticks on X-Axis at 0.0,0.5,1.0,1.5 and ticks on Y-Axis at -0.2, 0.2, 0.6, 1.0 respectively.
+    axes1.set_xticks([0.0, 0.5, 1.0, 1.5])
+    axes1.set_yticks([-0.2, 0.2, 0.6, 1.0])
+
+    # Create an axes, using plt.subplot function. Name it as axes2.
+    # The subplot must point to the Second virtual grid created by 2 rows and 2 columns.
+    # Set 'title' argument to 'Scatter plot with Circle Markers'.
+    axes2 = plt.subplot(2, 2, 2, title='Scatter plot with Circle Markers')
+
+    # Draw a scatter plot of 'x' and 'y' using 'scatter' function on 'axes2'.
+    # Set arguement 's' to 80, 'c' to z and 'marker' to 'o'.
+    axes2.scatter(x, y, s=80, c=z, marker="o")
+
+    # Add ticks on X-Axis at 0.0,0.5,1.0,1.5 and ticks on Y-Axis at -0.2, 0.2, 0.6, 1.0 respectively.
+    axes2.set_xticks([0.0, 0.5, 1.0, 1.5])
+    axes2.set_yticks([-0.2, 0.2, 0.6, 1.0])
+
+    # Create an axes, using plt.subplot function. Name it as axes3.
+    # The subplot must point to the Third virtual grid created by 2 rows and 2 columns.
+    # Set 'title' argument to 'Scatter plot with Plus Markers'.
+    axes3 = plt.subplot(2, 2, 3, title='Scatter plot with Plus Markers')
+
+    # Draw a scatter plot of 'x' and 'y' using 'scatter' function on 'axes3'.
+    # Set arguement 's' to 80, 'c' to z and 'marker' to '+'.
+    axes3.scatter(x, y, s=80, c=z, marker="+")
+
+    # Add ticks on X-Axis at 0.0,0.5,1.0,1.5 and ticks on Y-Axis at -0.2, 0.2, 0.6, 1.0 respectively.
+    axes3.set_xticks([0.0, 0.5, 1.0, 1.5])
+    axes3.set_yticks([-0.2, 0.2, 0.6, 1.0])
+
+    # Create an axes, using plt.subplot function. Name it as axes4.
+    # The subplot must point to the Fourth virtual grid created by 2 rows and 2 columns.
+    # Set 'title' argument to 'Scatter plot with Upper Triangle Markers'.
+    axes4 = plt.subplot(2, 2, 4, title='Scatter plot with Upper Triangle Markers')
+
+    # Draw a scatter plot of 'x' and 'y' using 'scatter' function on 'axes4'.
+    # Set arguement 's' to 80, 'c' to z and 'marker' to '^'.
+    axes4.scatter(x, y, s=80, c=z, marker="^")
+
+    # Add ticks on X-Axis at 0.0,0.5,1.0,1.5 and ticks on Y-Axis at -0.2, 0.2, 0.6, 1.0 respectively.
+    axes4.set_xticks([0.0, 0.5, 1.0, 1.5])
+    axes4.set_yticks([-0.2, 0.2, 0.6, 1.0])
+
+    plt.tight_layout()
+    return fig
+
+
+# Task 3:
+def generate_figure3():
+
+    # Write your functionality below
+
+    # Define a numpy array X with expression  'np.arrange(1,301,3)'
+    x = np.arange(1, 301, 3)
+    # Define another numpy array 'y1' with expression 'y1= x'
+    y1 = x
+    # Define another numpy array 'y2' with expression 'y2 = x**2'
+    y2 = x**2
+    # Define another numpy array 'y3' with expression 'y3= x**3'
+    y3 = x**3
+
+    # Create a figure of size 9 inhes in width, and 7 inches in height. Name it as fig.
+    fig = plt.figure(figsize=(9, 7))
+
+    # Define a grid  'gr' of 2 rows and 2 coloumns, using 'GridSpec' function. Ensure that 'matplotlib.gridspec' is imported, before defining the grid.
+    gr = gridspec.GridSpec(2, 2)
+
+    # Create an axes, using plt.subplot function. Name it as axes1.
+    # The subplot must span the 1st row and 1st column of the defined grid 'gr'.
+    # Set 'title' argument to 'y=x'.
+    axes1 = plt.subplot(gr[0, 0], title='y = x')
+
+    # Draw a line plot of 'x' and 'y1' using 'plot' function on 'axes1'.
+    axes1.plot(x, y1)
+
+    # Create an axes, using plt.subplot function. Name it as axes2.
+    # The subplot must span the 2nd row and 1st column of the defined grid 'gr'.
+    # Set 'title' argument to 'y=x**2'.
+    axes2 = plt.subplot(gr[1, 0], title='y = x**2')
+
+    # Draw a line plot of 'x' and 'y2' using 'plot' function on 'axes2'.
+    axes2.plot(x, y2)
+
+    # Create an axes, using plt.subplot function. Name it as axes3.
+    # The subplot must span all rows and 2nd column of the defined grid 'gr'.
+    # Set 'title' argument to 'y=x**3'.
+    axes3 = plt.subplot(gr[:, 1], title='y = x**3')
+
+    # Draw a line plot of 'x' and 'y3' using 'plot' function on 'axes3'.
+    axes3.plot(x, y3)
+
+    plt.tight_layout()
+    return fig
+
+    # Refer '__main__' method code which is given below if required.
+
+if __name__ == '__main__':

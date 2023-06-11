@@ -1,0 +1,110 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def sine_wave_plot():
+    # Write your functionality below
+
+    # Create a figure of size 13 inches in width, and 4 inches in height. Name it as fig.
+    fig = plt.figure(figsize=(13, 4))
+
+    # Create an axis, associated with figure fig, using add_subplot. Name it as ax.
+    ax = fig.add_subplot(111)
+
+    # Create a numpy array arr_t with 250 values between 0.0 and 3.0. USe the 'linespace' method to generate 250 values.
+    arr_t = np.linspace(0.0, 3.0, 250)
+
+    # Create a numpy array arr_v such that arr_v= np.sin(2.5*np.pi*arr_t).
+    arr_v = np.sin(2.5*np.pi*arr_t)
+
+    # Pass arr_t and arr_v as variable to plot function and draw a red line passing through the selected 250 points.
+    # Label the line as sin(arr_t).
+    x = arr_t
+    y = arr_v
+    plt.plot(x, y, label='sin(arr_t)', color='red')
+
+    # Label X_Axis as Time(seconds), Label Y-Axis as Voltage(mv).
+    # Set Title as Sine Wave.
+    # Limit data on X-Axis from 0 to 2, Limit data on Y-Axis from -1 to 1.
+    ax.set(title='Sine Wave', xlabel='Time (seconds)', ylabel="Voltage (mv)", xlim=(0,2), ylim=(-1, 1))
+
+    # Mark major ticks on X_Axis at 0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0.
+    plt.xticks([0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0])
+
+    # Mark major ticks on Y-Axis at -1,0, and 1.
+    plt.yticks([-1, 0, 1])
+
+    # Add a grid, whose linestyle is dashdot.
+    plt.grid(linestyle='--', which='major')
+    plt.legend()
+    return fig
+
+
+def multi_curve_plot():
+    # Write your functionality below
+
+    # Create a figure of size 13 inches in width, and 4 inches in height. Name it as fig.
+    fig = plt.figure(figsize=(13, 4))
+
+    # Create an axis, associated with figure fig, using add_subplot. Name it as ax.
+    ax = fig.add_subplot(111)
+
+    # Create a numpy array arr_x with 25 values between 0.0 and 7.0. USe the 'linespace' method to generate 25 values.
+    arr_x = np.linspace(0, 7, 25)
+
+    # Create three numpy arrays arr_y1, arr_y2 and arr_y3, using the expression arr_y1 = arr_x, arr_y2 = arr_x**2 and arr_y3 = arr_x**3.
+    arr_y1 = arr_x
+    arr_y2 = arr_x**2
+    arr_y3 = arr_x**3
+
+    # Draw a green colored line passing through arr_x and arr_y1, using the plot function. 
+    # Mark the 25 data points on the lines as upward pointed triangles. Label the as y = arr_x.
+    plt.plot(arr_x, arr_y1, label='y = arr_x', color='green', marker="^")
+
+    # Draw a blue colored line passing through arr_x and arr_y2, using the plot function. 
+    # Mark the 25 data points on the lines as Squares. Label the as y = arr_x**2.
+    plt.plot(arr_x, arr_y2, label='y = arr_x**2', color='blue', marker='s')
+
+    # Draw a red colored line passing through arr_x and arr_y3, using the plot function.
+    # Mark the 25 data points on the lines as Circles. Label the as y = arr_x**3.
+    plt.plot(arr_x, arr_y3, label='y = arr_x**3', color='red', marker='o')
+
+    # Label X-Axis as arr_x. Label Y_Axis as f(arr_x)
+    # Set the Title as Linear, Quadratic, &  Cubic Equations.
+    ax.set(title='Linear, Quadratic, &  Cubic Equations', xlabel='arr_x',
+           ylabel="f(arr_x)")
+    plt.legend()
+    return fig
+
+
+def scatter_plot():
+    # Write your functionality below.
+
+    # Create a figure of size 13 inches in width, and 4 inches in height. Name it as fig.
+    fig = plt.figure(figsize=(13, 4))
+
+    # Create an axis, associated with figure fig, using add_subplot. Name it as ax.
+    ax = fig.add_subplot(111)
+
+    # Consider the list ca_sales=  [40, 65, 70, 40, 55, 60, 75, 60, 80, 95, 96, 105]. It represents the number of cars sold by a Company 'X' in each month of 2021, starting from January, 2021.
+    car_sales = [40, 65, 70, 40, 55, 60, 75, 60, 80, 95, 96, 105]
+
+    # Create a list of months contaning numbers from 1 to 12
+    months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+    # Draw a scatter plot with variables months and car_sales as arguments. Mark the data points in green color. Use the scatter function for plotting. Label the points as car sales.
+    ax.scatter(months, car_sales, color='green', marker='o')
+
+    # Limit data on X-Axis from 0 to 13. Limit data on Y-Axis from 10 to 110.
+    # Mark ticks on X-Axis at 1,3,5,7,9, and 11.
+    # Label the X-Axis ticks as January, March, May, July, Sepetember, and November respectively.
+    # Set Title as "Cars Sold by Company 'Z' in 2021".
+
+    ax.set(title="Cars Sold by Company 'Z' in 2021", xlabel='Months', ylabel='No. of Cars Sold', xlim=(0, 13), ylim=(10, 110))
+    plt.xticks([1, 3, 5, 7, 9, 11], ['January', 'March', 'May', 'July', 'September', 'November'])
+    plt.legend()
+    return fig
+    
+    # Refer '__main__' method code which is given below if required.
+    
+if __name__ == '__main__':

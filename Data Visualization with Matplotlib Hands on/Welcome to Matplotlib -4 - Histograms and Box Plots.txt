@@ -1,0 +1,71 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def hist_of_a_sample_normal_distribution():
+
+    # Write your functionality below
+
+    # Create a figure of size 9 inches in width, and 7 inches in height. Name it as fig.
+    fig = plt.figure(figsize=(9, 7))
+
+    # Create an axis, associated with figure fig, using add_subploat. Name it as ax.
+    ax = fig.add_subplot(111)
+
+    # Set random see to 100 using the expression np.random.seed(100)
+    np.random.seed(100)
+
+    # Create a normal distribution dist_arr of 1000 values, with mean 35 and standard deviation 3.0. Use the hist function.
+    dist_arr = 35 + 3.0*np.random.randn(1000)
+
+    # Label X-Axis as dist_arr, Label Y-Axis as 'Bin Count'.
+    # Set title as Histogram of a Single Dataset.
+    ax.set(title="Histogram of a Single Dataset", ylabel='Bin Count', xlabel='dist_arr')
+    ax.hist(dist_arr, bins=35)
+
+    return fig
+
+
+def boxplot_of_four_normal_distribution():
+
+    # Write your functionality below.
+
+    # Create a figure of size 9 inches in width, and 7 inches in height. Name it as fig.
+
+    fig = plt.figure(figsize=(9, 7))
+
+    # Create an axis, associated with figure fig, using add_subploat. Name it as ax.
+    ax = fig.add_subplot(111)
+
+    # Set random see to 100 using the expression np.random.seed(100)
+    np.random.seed(100)
+
+    # Create a normal distribution arr_1 of 2000 values, with mean 35 and standard deviation 6.0. Use np.random.randn.
+    arr_1 = 35 + 6.0*np.random.randn(2000)
+
+    # Create a normal distribution arr_2 of 2000 values, with mean 25 and standard deviation 4.0. Use np.random.randn.
+    arr_2 = 25 + 4.0*np.random.randn(2000)
+
+    # Create a normal distribution arr_3 of 2000 values, with mean 45 and standard deviation 8.0. Use np.random.randn.
+    arr_3 = 45 + 8.0*np.random.randn(2000)
+
+    # Create a normal distribution arr_4 of 2000 values, with mean 55 and standard deviation 10.0. Use np.random.randn.
+    arr_4 = 55 + 10.0*np.random.randn(2000)
+
+    # Create a list labels with elements ['arr_1', 'arr_2', 'arr_3', 'arr_4']
+    labels = ['arr_1', 'arr_2', 'arr_3', 'arr_4']
+
+    # Draw a Boxplot arr_1, arr_2, arr_3, arr_4 with notches and label it using the labels list. USe the boxplot function.
+    # Choose 'o' symbol for outlier, and fill color inside boxes by setting patch_artist argument to True.
+    norml_dist_list = [arr_1, arr_2, arr_3, arr_4]
+    ax.boxplot(norml_dist_list, labels=labels, notch=True, sym='o', patch_artist=True)
+    
+    # Label X_Axes as 'Dataset', Label Y-Axes as 'Value'. Set Title as "Box Plot of Multiple Dataset".
+    ax.set(title="Box Plot of Multiple Dataset", ylabel='Value', xlabel='Dataset')
+
+    return fig
+    
+    # Refer '__main__' method code which is given below if required.
+      
+if __name__ == '__main__':
