@@ -1,0 +1,26 @@
+import numpy as np
+# Enter your code here. Read input from STDIN.
+
+def array_attributes(l):
+    y = np.array(l)
+    x=y
+    # Type of the Array
+    print( type(x) )    
+    # Dimensions of X
+    print( x.ndim )    
+    #Shape of X
+    print( x.shape)    
+    # Size of Y
+    print(x.size)    
+    # Type of each data element of X
+    print(x.dtype)    
+    #Number of Bytes occupied by each data element of X
+    print(x.itemsize)
+
+if __name__=="__main__":
+    r=int(input())
+    l=[]
+    for i in range(r):
+        n = list(map(int,input().split()))
+        l.append(n)
+    array_attributes(l)

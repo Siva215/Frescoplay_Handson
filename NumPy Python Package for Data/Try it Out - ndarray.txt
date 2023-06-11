@@ -1,0 +1,12 @@
+import numpy as np
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+  
+def ndarray(array_input):
+  #Write your code here
+  x1=np.array(array_input)
+   
+  print(x1.ndim)
+  print(x1.shape)
+   
+  print(x1.size)  
+  
