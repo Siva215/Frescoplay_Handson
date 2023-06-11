@@ -1,0 +1,17 @@
+Create an Angular Application: -
+
+app.component.ts:-
+
+import { Component } from '@angular/core';
+
+@Component({
+
+  // Add your code here for both selector and template
+
+  selector: 'app-root',
+
+  template:'<h1>My first angular app </h1>'
+
+})
+
+export class AppComponent {}

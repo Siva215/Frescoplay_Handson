@@ -1,0 +1,59 @@
+app.component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+
+  selector: 'app-root',
+
+  templateUrl: './app.component.html',
+
+  styleUrls: ['./app.component.css']
+
+})
+
+export class AppComponent {
+
+  //Define your variables done,todos,newToDo,newToDoObj,error
+
+  //Define your constructor here with todos as [] ,newToDo as '' and error as false
+
+  //Define your addMore function here
+
+  //Define your clearAll function here
+
+  public done: boolean;
+
+  public todos: any;
+
+  public newToDo: string;
+
+  public newToDoObj: any;
+
+  public error: boolean;
+
+  //public TODOS : Array;
+
+  constructor(){
+
+    this.todos = [];
+
+    this.newToDo = '';
+
+    this.error = false;
+
+  }
+
+  addMore(){
+
+   this.todos.push({done: true, item: this.newToDo});
+
+  }
+
+  clearAll(){
+
+  this.todos = [];
+
+ }
+
+}

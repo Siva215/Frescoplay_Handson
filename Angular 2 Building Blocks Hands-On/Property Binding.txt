@@ -1,0 +1,5 @@
+app.component.html
+
+<!--use your message property here using property binding-->
+
+<span [innerHTML]="message">hey there</span>

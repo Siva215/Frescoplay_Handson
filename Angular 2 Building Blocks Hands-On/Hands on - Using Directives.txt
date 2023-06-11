@@ -1,0 +1,51 @@
+Using Directives :- app.components.ts only
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template:`
+    <!doctype html>
+    <select [(ngModel)]="selectedDay" >
+      <option
+      *ngFor='let day of days; let i = index'
+      [attr.data-index]="i"
+      [ngValue]="i">
+        {{ day.today }}
+      </option>
+    </select>
+    <br><br>
+    <h2>{{ days[selectedDay].msg }}</h2>
+  `
+})
+
+export class AppComponent {
+  //Define your variables show,message,selectedDay,selectedValue,days
+  //Define your constructor here with selectedDay as 0
+  
+  show: boolean;
+  message: string;
+  selectedDay: number;
+  selectedValue: string;
+  
+  //type MyArrayType = Array<{today: string, msg: string}>;
+
+days: Array<Object> = [
+    {today: 'Monday', msg: 'Marvelous Mondays!'},
+    {today: 'Tuesday', msg: 'Thrilling Tuesdays!'},
+    {today: 'Wednesday', msg: 'Wonderful Wednesdays!'},
+    {today: 'Thursday', msg: 'Trendy Thursdays!'},
+    {today: 'Friday', msg: 'Fantastic Fridays!'},
+    {today: 'Saturday', msg: 'Super Saturdays!'},
+    {today: 'Sunday', msg: 'Sunny Sundays!'},
+];
+
+    constructor() {
+        this.selectedDay = 0;
+    }
+}
+
+
+
+link : https://embed.plnkr.co/or14Wh/
