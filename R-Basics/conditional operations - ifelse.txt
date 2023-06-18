@@ -1,0 +1,3 @@
+R Basics - Conditional Operations - if/else
+
+cat(ifelse(V>=80,"Above_Average","Average"))

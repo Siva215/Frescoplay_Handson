@@ -1,0 +1,4 @@
+R Basics 28- function str()
+
+df <- data.frame(names,details)
+str(df,"inspect")

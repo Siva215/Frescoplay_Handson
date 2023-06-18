@@ -1,0 +1,3 @@
+R Basics 21 - string and Date
+
+ans<-c(as.Date(S, "%d %m %Y"))

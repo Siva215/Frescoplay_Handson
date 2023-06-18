@@ -1,0 +1,3 @@
+R Basics 18 - Random numbers
+
+ans<-rep(seq(a,b, by = 2),2)
