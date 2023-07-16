@@ -7,62 +7,77 @@ import re
 import sys
 
 
-def Reverse(lst):
-    lst.reverse()
-    return lst
+
 
 
 def stringmethod(para, special1, special2, list1, strfind):
-    # Section 1 --> Ok
-    word1 = ""
-    for character in para:
-        if character not in special1:
-            word1 = word1 + character
-    rword2 = word1[0:70]
-    print(rword2[::-1])
 
-    # Section 2 --> Ok
-    rword3 = rword2[::-1]
-    rword3 = re.sub("\s+", "", rword3)
-    temp = ""
-    for character in rword3:
-        temp = temp + character + special2
-    print(temp[:-1])
+    # Task 1 : Remove all the special characters from "para" specified  in "special1" and save them in the variable "word1"
 
-    # Section 3 --> Ok
-    a = True
-    for s in list1:
-        if s not in para:
-            a = False
-    if a:
-        print("Every string in ", end=" "),
-        print(list1, end=" "),
-        print("were present")
+    word1=re.sub(f"[{special1}]", "", para)
+    
+
+    # Task 2 : Get the first 70 characters from "word1", reverse the string, save it in variable "rword2", and print it.
+
+    #rword2=word1[69::-1]
+
+    rword2=word1[:70][::-1]
+    print(rword2)
+    
+
+    # Task 3 : Remove all the wide spaces from "rword2", join the character using the special character specified in "special2", and print the joint string.
+
+    temp=rword2.replace(" ","").strip() 
+    temp=special2.join(temp)
+    print(temp)   
+
+    
+
+    #Task 4 : If every string from list1 is present in para, then formate the print statement as follow:
+
+    #               Every string in {list1} were present
+    #         else
+    #               Every String in {list1} were not present
+
+
+
+    if all ( list1_item in para for list1_item in list1)  :
+      print(f"Every string in {list1} were present")
     else:
-        print("Every string in ", end=" "),
-        print(list1, end=" "),
-        print("were not present")
+      print(f"Every string in {list1} were not present")        
 
-    # Section 4 --> OK
-    print(word1.split()[:20])
+    
 
-    # Section 5
-    word_list = word1.split()
+    # Task 5 : Split every word from word1 and print the first 20 strings as a list.
 
-    temp_dict = dict()
-    for str1 in word_list:
-        if word_list.count(str1) <= 3:
-            if str1 not in temp_dict:
-                temp_dict[str1] = 0
-            temp_dict[str1] += 1
-    temp_list = []
-    for value in list(reversed(list(temp_dict)))[0:20]:
-        temp_list.append(value)
-    print(Reverse(temp_list))
+    s=word1.split()
+    print(s[:20])
 
-    # Section 6
+
+    #Task 6 : Calculate the less frequently used words whose count <3 , and print the last 20 less frequent words as a list.
+
+    # Note: Count the words in the order as a list.
+    
+
+    unique_list=[]
+    final_list=[]
+
+    for i in s:
+      if i not in unique_list:
+        unique_list.append(i)  
+
+    for i in unique_list:
+      if s.count(i)<3:  
+        final_list.append(i)
+    print(final_list[-20:])
+
+    
+
+    #Task 7 : Print the last index in word1, where the substring strfind is found.
+
     print(word1.rindex(strfind))
-
+    
+    # Refer '__main__' method code which is given below if required. 
 
 if __name__ == '__main__':
     para = input()  # a string
