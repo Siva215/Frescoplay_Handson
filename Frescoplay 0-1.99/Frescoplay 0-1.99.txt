@@ -93,7 +93,8 @@ hands on :-  https://www.pdfcup.com/2022/08/numpy-python-package-for-data-scienc
 
 10> Stats with Python - 0.5
 
-Mcqs :-   Google , python online compiler
+Mcqs :-  https://www.crackyourinterview.com/MobileSub-Stats-with-Python-Questions.aspx
+  
 
 hands on :-   https://www.pdfcup.com/2023/02/stats-with-python-fresco-play-hands-on.html
 
@@ -103,12 +104,11 @@ hands on :-   https://www.pdfcup.com/2023/02/stats-with-python-fresco-play-hands
 
 11> Angular 2 Building Blocks - 0.6
 
-Mcqs :-  Google , python online compiler
+Mcqs :-   https://crackyourinterview.com/MobileSub-Angular-2-Building-Blocks.aspx
+
 
 hands on :-   https://madanswer.com/62502/angular-2-building-blocks-hands-on-solution 
-         :-   https://crackyourinterview.com/MobileSub-Angular-2-Building-Blocks.aspx
-
-
+        
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 12> HTML5 Semantic Elements -0.25
