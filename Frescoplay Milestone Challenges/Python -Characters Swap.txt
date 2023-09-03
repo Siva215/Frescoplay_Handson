@@ -1,0 +1,133 @@
+Python -Characters Swap :-
+
+
+Given a string s, repeat this operation zero or more
+
+times to create the lexicographically smallest string
+
+possible.
+
+1. Select two characters that exist in the string, c1, andc2.
+
+2. Replace all occurrences of c1 with c2 and alloccurrences of c2 with c1.
+
+Note: For two strings x and y of length n, x islexicographically smaller than y if the first non-
+
+matching character in x is less than the character at
+
+that position in y.
+
+Example
+
+s="bbcacad"
+
+• Select c1= 'b' and c2=  'a' , after swappingoccurrences, s="aacbcbd" .
+
+• Select c1='b' and c2='C' ,after swappingoccurrences of c1 and c1 we get s = "aabcbcd".
+
+It can be proven that this is the lexicographicallysmallest string s can be converted to. Return"aabcbcd".
+
+Function Description
+
+Complete the function getString in the editor below.
+
+getString has the following parameter:
+
+string s: the string to process
+
+Returns
+
+string: the lexicographically smallest string s can be changed to
+
+
+
+
+Input Format For Custom Testing
+
+The first line contains a string,s
+
+Sample Case 0
+
+Sample Input For Custom Testing
+
+STDIN      FUNCTION
+------    -----------
+bdea    -> s = "bdea"
+
+Sample Output
+
+abde
+
+
+• Select a='a' and b ='b' , after swappingoccurrences of a and b we get s = "adeb".
+
+• Select a='b' and b='d' , after swappingoccurrences of a and b we get s='abed' .
+
+• Select a='e' and b='d' , after swapping occurrences of a and b we get s="Abde".
+
+
+Sample Case 1
+
+Sample Input For Custom Testing
+
+STDIN      FUNCTION
+------    -----------
+abbbe   -> s = "abbbe"
+
+Sample Output
+
+abbbe
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+#
+# Complete the 'getString' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts STRING s as parameter.
+#
+
+def getString(s):
+    # Write your code here
+    # Initialize a dictionary for character replacements
+    char_replacements = {}
+    
+    # Convert the string to a list of characters
+    s = list(s)
+    
+    # Loop through the characters in the list
+    for i in range(len(s)):
+        c = s[i]
+        
+        # Check if c has a replacement in the dictionary
+        if c in char_replacements:
+            s[i] = char_replacements[c]
+        else:
+            # Find the next available character for replacement
+            replacement = chr(ord('a') + len(char_replacements))
+            char_replacements[c] = replacement
+            s[i] = replacement
+    
+    # Join the list of characters back into a string
+    return ''.join(s)
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = getString(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
