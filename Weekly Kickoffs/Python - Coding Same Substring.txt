@@ -1,0 +1,131 @@
+Python - Coding Same Substring
+
+
+Two strings, s, and t, each of length n, that containlowercase English characters are given as well as aninteger K.
+
+• The cost to change the ith character in s from S_{i} tot, is the absolute difference of the ASCII value ofcharacters, i.e., abs( s_{i} - t_{i} ) .
+
+Find the maximum length of a substring of s thatcan be changed to the corresponding substring of twith a total cost less than or equal to K. If there isno such substring, return 0.
+
+Example
+
+It is given that s = "adpgki", t = "cdmxki", K = 6
+
+Change S_{0} from 'a' to 'c' with cost = abs('a' - 'c') = 2.String s is now "cdpgki" and k = 6 - 2 = 4
+
+Change S_{2} from 'p' to 'm' with cost = abs('p' - 'm') =3. String s is "cdmgki" and K = 4 - 3 = 1 .
+
+• The only character left to change is 'g' to 'x', whichcosts more than K.
+
+The longest substring in s that is equal to thecorresponding substring in tis s[0, 2] = t[0, 2] .Hence, the answer is 3.
+
+Input Format For Custom Testing
+
+The first line contains string s.
+
+The second line contains the string t.
+
+The last line contains an integer, K.
+
+▼ Sample Case 0
+
+Sample Input For Custom Testing
+
+STDIN    FUNCTION
+
+uaccd  -> s = "uaccd"
+
+gbbeg  -> t = "gbbeg"
+
+4       -> K = 4
+
+Sample Output
+
+3
+
+▼ Sample Case 1
+
+Sample Input for Custom Testing
+
+STDIN       FUNCTION
+
+hffk    ->  s = "hffk"
+larb    ->  t = "larb"
+3       ->  k = 3
+
+Sample Output 
+
+0
+
+
+
+----------------------------------------------------------------------------------
+
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+#
+# Complete the 'sameSubstring' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. STRING s
+#  2. STRING t
+#  3. INTEGER K
+#
+
+def sameSubstring(s, t, K):
+    n = len(s)
+    max_len = 0  # Initialize the maximum length of the substring
+
+    # Initialize the left and right pointers for the sliding window
+    left, right = 0, 0
+
+    # Initialize the current cost
+    current_cost = 0
+
+    while right < n:
+        # Calculate the cost of changing the current character
+        cost = abs(ord(s[right]) - ord(t[right]))
+
+        # Update the current cost
+        current_cost += cost
+
+        # If the current cost exceeds K, move the left pointer to the right
+        while current_cost > K:
+            current_cost -= abs(ord(s[left]) - ord(t[left]))
+            left += 1
+
+        # Update the maximum length of the substring
+        max_len = max(max_len, right - left + 1)
+
+        # Move the right pointer to the right
+        right += 1
+
+    return max_len
+
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    t = input()
+
+    K = int(input().strip())
+
+    result = sameSubstring(s, t, K)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()

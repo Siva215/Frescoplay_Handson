@@ -1,0 +1,17 @@
+def getMinLength(arr):
+    n =len(arr)
+    
+    if n==1 or n==2:
+        return 1
+        
+    minele=sys.maxsize
+    temp =0
+    for i in range(n):
+        if arr[i]<minele:
+            temp=0
+            minele =arr[i]
+            
+        if arr[i]==minele:
+            temp+=temp
+    
+    return math.ceil(temp/2)
