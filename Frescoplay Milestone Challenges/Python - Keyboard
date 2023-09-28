@@ -1,1 +1,132 @@
+Milestone - Coding - Python - Keyboard
 
+Each day, to enter their building, employees of an e-commerce company have to type a string of numbers into a console using a 3 x 3 numeric keypad. Every day, the numbers on the keypad are mixed up.
+
+Use the following rules to calculate the total amount of time it takes to type a string:
+
+It takes O seconds to move their finger to the first key, and it takes 0 seconds to press the key where their finger is located any number of times.
+
+They can move their finger from one location to any adjacent key in one second. Adjacent keys include those on a diagonal.
+
+Moving to a non-adjacent key is done as a series of moves to adjacent keys.
+
+Function Description
+
+Complete the function entryTime in the editor below.
+
+entry Time has the following parameter(s): strings: the string to type string keypad: a string of 9 digits where each group of 3 digits represents a row on the keypad of the day, in order
+
+Returns:
+
+int: integer denoting the minimum amount of time it takes to type the string s.
+
+
+Sample Case 0
+
+Sample Input 0
+
+STDIN         Function parameters
+------       ----------------------
+423692     -> string s ="423692"
+923857614  -> string keypad = "923857614"
+
+Sample Output 0
+
+8
+
+
+Calculate the time it takes to type s = 423692 as follows:
+
+• 4: Start here, so it takes 0 seconds.
+
+• 2. It takes 2 seconds to move from 4→2
+
+• 3: It takes 1 second to move from 2→3
+
+.  6: It takes 2 seconds to move from 3-6 • 9. It takes 2 seconds to move from 6-9
+
+• 2: It takes 1 second to move from 9-2
+
+The total time is 2+1+2+2+1=8
+
+
+
+Sample Case 1
+
+Sample Input 1
+
+STDIN         Function parameters
+------       ----------------------
+5111     -> string s ="5111"
+752961348  -> string keypad = "752961348"
+
+Sample Output 1
+
+1
+
+
+
+
+
+Sample Case 2
+
+Sample Input 2
+
+STDIN         Function parameters
+------       ----------------------
+91566165    -> string s ="91566165"
+639485712  -> string keypad = "639485712"
+
+Sample Output 2
+
+11
+
+-----------------------------------------------------------------------------------------------
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+#
+# Complete the 'entryTime' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. STRING s
+#  2. STRING keypad
+#
+
+def entryTime(s, keypad):
+    key_positions = {}
+    for i in range(len(keypad)):
+        key_positions[keypad[i]] = (i // 3, i % 3)
+
+    time = 0
+    current_position = key_positions[s[0]]
+    for i in range(1, len(s)):
+        next_position = key_positions[s[i]]
+        time += max(abs(current_position[0] - next_position[0]), abs(current_position[1] - next_position[1]))
+        current_position = next_position
+
+    return time
+    
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    keypad = input()
+
+    result = entryTime(s, keypad)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
