@@ -1,0 +1,29 @@
+import multiprocessing
+
+ 
+
+def calc_it(start, end):
+
+    s = 0
+
+    for i in range(start,end+1):
+
+        s = s+i
+
+    return s 
+
+ 
+
+def do_it(n):
+
+    s1 = 0
+
+    i = 0
+
+    while i<=n:
+
+       s1 = s1 + i
+
+       i = i + 1
+
+    return s1
