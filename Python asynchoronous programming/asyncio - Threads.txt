@@ -1,0 +1,21 @@
+import threading
+
+ 
+
+def square_it(n):
+
+    sq = n*n
+
+    print(sq)
+
+ 
+
+def do_it(a,b):
+
+    a = threading.Thread(target = square_it,args=(a,))
+
+    b = threading.Thread(target = square_it,args=(b,))
+
+    a.start()
+
+    b.start()
