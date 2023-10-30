@@ -1,0 +1,63 @@
+Milestone - Coding - Python - Number Based
+
+Problem Statement:
+
+Create the test() function, which takes the integer "n" as input and prints the following output:
+
+• Sort a number in descending order
+
+• Determine whether the number in descending order is a prime or not. If the number is a prime, then print "Sorted Number is a prime number," otherwise, print "Sorted Number is not a prime number."
+
+• Determine all of the factors of the descending order number.
+
+• Finally, sort the given number to ascending order.
+
+
+Input Format For Custom Testing
+
+Input is the integer 'n'
+
+
+Sample Case 0
+
+Sample Input
+
+78343
+
+Sample Output
+
+87433
+Sorted number is a prime number
+1
+87433
+33478
+
+-----------------------------------------------------------------------------------------------
+
+def test(n):
+    #write your code here
+    number = str(n)
+    number = ''.join(sorted((number),reverse = True))
+    number = int(number)
+    print(number)
+    
+    if number>1:
+        for i in range(2, int(number/2)+1):
+            if(number % i)==0:
+                print("Sorted Number is not a prime number")
+                break
+            else:
+                print("Sorted Number is a prime number")
+    else:
+        print("Sorted Number is not a prime number")
+        
+    for i in range(1, number+1):
+        if number%i==0:
+            print(i)
+            
+    number = str(n)
+    number =''.join(sorted(number))
+    number = int(number)
+    return number
+        
+
