@@ -1,0 +1,130 @@
+Milestone - Coding - Optimal String
+
+A string is to be constructed using only the characters A and B Given four integers, countA, countB, maxA, maxB, the constructed string is said to be optimal if
+
+• There are at most countA 'A' characters, and countB 'B' characters.
+
+• Each substring of only 'A's contains at most maxA A characters
+
+Each substring of only 'B's contains at most maxB'B' characters
+
+HackerRank organized fun trivia for its employees where it asked for the maximum possible length of an optimal string that can be constructed satisfying the criteria above The goal is to find the maximum possible length of an optimal string
+
+Note
+
+There can be multiple optimal strings with the same maximal length.
+
+• A substring of a string is a contiguous subsegment of the string.
+
+Example:
+
+Consider countA=3, countB = 5, maxA= 1 maxB=1 The maximal length optimal string that can be constructed is 'BABABAB' whose length is 7 Thus, the answer is 7
+
+Function Description
+
+Complete the function getOptimalStringLength in the editor below. getOptimalStringLength has the following parameters. int countA. the maximum count of character 'A' int countB. the maximum count of character 'B' int maxA. the maximum substring length of character 'A' int maxB: the maximum substring length of character 'B'
+
+Returns:
+
+long_int the maximum length of optimal string that can be constructed
+
+Constraints
+
+-> Os countA countB, maxA, maxB ≤ 10^6
+
+
+
+▾ Sample Case 0
+
+Sample Input For Custom Testing
+
+STDIN    FUNCTION
+------   ---------
+2      -> countA = 2
+4      -> countB = 4
+2      -> maxA = 2
+1      -> maxB = 1
+
+Sample Output
+
+5
+
+Explanation 
+
+The maximal length optimal string is 'BABAB'.
+
+
+
+▾ Sample Case 1
+
+Sample Input For Custom Testing
+
+STDIN    FUNCTION
+------   ---------
+3      -> countA = 3
+3      -> countB = 3
+3      -> maxA = 3
+3      -> maxB = 3
+
+Sample Output
+
+6
+
+Explanation 
+
+The maximal length optimal string is 'AAABBB'.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+#
+# Complete the 'getOptimalStringLength' function below.
+#
+# The function is expected to return a LONG_INTEGER.
+# The function accepts following parameters:
+#  1. INTEGER countA
+#  2. INTEGER countB
+#  3. INTEGER maxA
+#  4. INTEGER maxB
+#
+
+def getOptimalStringLength(countA, countB, maxA, maxB):
+    #write code here
+    minA = min(countA, (countB + 1) * maxA)
+    minB = min(countB, (countA + 1) * maxB)
+
+    
+    result = minA + minB
+
+    return result
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    countA = int(input().strip())
+
+    countB = int(input().strip())
+
+    maxA = int(input().strip())
+
+    maxB = int(input().strip())
+
+    result = getOptimalStringLength(countA, countB, maxA, maxB)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
