@@ -1,0 +1,206 @@
+Milestone-CSS3-ResponsiveForm
+
+Complete a website layout application with the following UI components.
+
+
+
+Desktop version :-
+
+
+Your form
+
+
+First name        Last name        Age
+
+Address
+
+Place of work            Job tittle
+
+Phone number             Skype
+
+        
+             submit
+
+
+
+
+-------------------------------------------------------------------------------
+
+Mobile Version :-
+
+
+Your form
+
+
+First name
+
+Last name
+
+Age
+
+Address
+
+Place of work
+
+Job tittle
+
+Phone number
+
+Skype
+
+       Submit
+
+
+
+
+
+The form contains 8 input fields and a submit button.
+
+• Elements should have a 10px margin between them.
+
+For the desktop layout (screen width ≥768px):
+
+• "First name", "Last name" and "Age" fields should be positioned on the first row and have equal widths.
+
+• The "Address" field should be positioned on the second row and take the width of the form.
+
+• The "Place of work" and "Job title" fields should be positioned on the third row and have equal widths.
+
+• The "Phone number" and "Skype" fields should be positioned on the fourth row and have equal widths
+
+• The button should be positioned on the last row and take the width of the form.
+
+For the mobile layout (screen width <768px): • All fields should take the width of the form.
+
+Elements should not have position: absolute.
+
+The markup for the question is provided Complete the src/css/style.css file to implement the required features.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+style.CSS :-
+
+
+/* Set a 10px margin between elements */
+form {
+  display: grid;
+  gap: 10px;
+}
+
+/* For desktop layout (screen width ≥768px) */
+@media (min-width: 768px) {
+  /* Set the grid template columns to define the desired number and size of columns */
+  form {
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    grid-template-rows: repeat(4, auto); /* Four rows with automatic height */
+  }
+
+  /* Positioning for first row */
+  .first-name,
+  .last-name,
+  .age {
+    grid-column: 1 / span 1; /* Position in the first column */
+  }
+
+  /* Positioning for second row */
+  .address {
+    grid-column: 1 / span 2; /* Position in both columns */
+    width: 100%; /* Take the width of the form */
+  }
+
+  /* Positioning for third row */
+  .place-of-work,
+  .job-title {
+    grid-column: 1 / span 1; /* Position in the first column */
+  }
+
+  /* Positioning for fourth row */
+  .phone-number,
+  .skype {
+    grid-column: 1 / span 1; /* Position in the first column */
+  }
+
+  /* Positioning for last row */
+  .submit {
+    grid-column: 1 / span 2; /* Position in both columns */
+    width: 100%; /* Take the width of the form */
+  }
+}
+
+/* For mobile layout (screen width <768px) */
+@media (max-width: 767px) {
+  /* All fields take the width of the form */
+  .first-name,
+  .last-name,
+  .age,
+  .address,
+  .place-of-work,
+  .job-title,
+  .phone-number,
+  .skype,
+  .submit {
+    width: 100%;
+  }
+}
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+index.html
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/h8k-design@latest/dist/index.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/npm/h8k-design@latest/dist/assets/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/h8k-components/dist/h8k-components/h8k-components.esm.js"
+            type="module"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/h8k-components/dist/h8k-components/h8k-components.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<!--HTML content goes here-->
+<h8k-navbar header="Responsive Form"></h8k-navbar>
+
+<div class="my-50 mx-auto">
+    <div class="container">
+        <div class="layout">
+            <h2>Your Form</h2>
+            <form>
+                <input placeholder="First name" class="first-name"/>
+                <input placeholder="Last name" class="last-name"/>
+                <input placeholder="Age" type="number" class="age"/>
+                <input placeholder="Address" class="address"/>
+                <input placeholder="Place of work" class="place-of-work"/>
+                <input placeholder="Job title" class="job-title"/>
+                <input placeholder="Phone number" class="phone-number"/>
+                <input placeholder="Skype" class="skype"/>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="template">
+            <h2>Expected Result</h2>
+            <div class="template-form">
+                <input placeholder="First name"/>
+                <input placeholder="Last name"/>
+                <input placeholder="Age" type="number"/>
+                <input placeholder="Address"/>
+                <input placeholder="Place of work"/>
+                <input placeholder="Job title"/>
+                <input placeholder="Phone number"/>
+                <input placeholder="Skype"/>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<!-- HMR and test infrastructure - DO NOT EDIT -->
+<script src="./bundle.js"></script>
+</html>
