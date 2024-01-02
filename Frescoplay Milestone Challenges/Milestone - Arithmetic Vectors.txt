@@ -1,0 +1,74 @@
+Milestone - Arithmetic Vectors
+
+
+Problem Statement
+
+Write the Functions addition, subtraction and dot product, which accepts the vectors as input and return addition, subtraction and dot product values of the two vectors as output.
+
+
+▼ Sample Case 0
+
+Sample Input For Custom Testing
+
+[4,2,4,2]
+
+[5,1,0,7]
+
+
+Sample Output
+
+[9, 3, 4, 9]
+
+[-1, 1, 4, 5]
+
+36
+
+
+
+
+▼ Sample Case 0
+
+Sample Input For Custom Testing
+
+[1,3,1,6]
+
+[2,0,1,8]
+
+
+Sample Output
+
+[3, 3, 2, 14]
+
+[-1, 3, 0, -2]
+
+51
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+import math
+import ast
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+def addition(vector1, vector2):
+    return [v1 + v2 for v1, v2 in zip(vector1, vector2)]
+
+def subtraction(vector1, vector2):
+    return [v1 - v2 for v1, v2 in zip(vector1, vector2)]
+
+def dot_product(vector1, vector2):
+    return sum(v1 * v2 for v1, v2 in zip(vector1, vector2))
+
+
+
+if __name__ == "__main__":
+    import ast
+    vector1 = ast.literal_eval(input())
+    vector2 = ast.literal_eval(input())
+    print(addition(vector1, vector2))
+    print(subtraction(vector1, vector2))
+    print(dot_product(vector1, vector2))
