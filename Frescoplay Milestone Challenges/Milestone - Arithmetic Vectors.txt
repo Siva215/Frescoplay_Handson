@@ -26,7 +26,7 @@ Sample Output
 
 
 
-▼ Sample Case 0
+▼ Sample Case 1
 
 Sample Input For Custom Testing
 
