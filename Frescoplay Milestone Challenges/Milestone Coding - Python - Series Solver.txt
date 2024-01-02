@@ -1,0 +1,142 @@
+Milestone - Coding - Python - Series Solver
+
+Given an array of strings, all but one will have a similar pattern of distances between character values. One will have a different pattern, the odd one out
+
+Example
+
+Given series = ['ACB BDC CED 'DEF') the distances for ACB, BDC, and CED are (2, 1). For DEF the distances are (1. 1), so it is the odd one out.
+
+Function Description
+
+Complete the function findOdd in the editor below.
+
+findOdd has the following parameter(s):
+
+string series[n]: an array of strings
+
+Returns
+
+string the odd one out
+
+Constraints
+
+3sns26
+
+2 s length of element s 26
+
+All strings contain only uppercase English letters ascii[A-Z]
+
+All strings in a single test case will be the same length.
+
+
+
+Input Format For Custom Testing
+
+The first line contains an integer, n, the number of elements in series Each of the subsequent n lines is the element of series (where 3 si<n).
+
+▼Sample Case 0
+
+Sample Input For Custom Testing
+
+STDIN         FUNCTION
+--------      ------------
+4        ->   series[] size n=4
+
+ABCD     ->   series[] = ["ABCD","BCDE", "EFGH", "DCBE"]
+
+BCDE
+
+EFGH
+
+DCBE
+
+
+
+Sample Output
+
+DCBE
+
+Explanation
+
+The strings ABCD, BCDE, and EFGH have distances of (1, 1, 1). DCBE has differences of (1. 1 3).
+
+
+
+▼ Sample Case 1
+
+Sample Input For Custom Testing
+
+STDIN      FUNCTION
+------     ----------
+
+5       -> series[] size n = 5
+
+ADC     -> series[] = [ "ADC" "BED", "CFE", "DGF", "FGH"]
+
+BED
+
+CFE
+
+DGH
+
+FGH
+
+
+sample output
+
+FGH
+
+Explanation 
+
+ADC,BED,CEF,DGF ->(3,1)
+FGH -> (1,1)
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+#
+# Complete the 'findOdd' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts STRING_ARRAY series as parameter.
+#
+
+def findOdd(series):
+    distances = []
+    for s in series:
+        distances.append(tuple(ord(s[i+1]) - ord(s[i]) for i in range(len(s)-1)))
+    odd_one_out = None
+    for i in range(len(distances)):
+        if distances.count(distances[i]) == 1:
+            odd_one_out = series[i]
+            break
+    return odd_one_out
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    series_count = int(input().strip())
+
+    series = []
+
+    for _ in range(series_count):
+        series_item = input()
+        series.append(series_item)
+
+    result = findOdd(series)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
