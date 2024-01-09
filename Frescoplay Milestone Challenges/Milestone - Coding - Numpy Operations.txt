@@ -1,0 +1,89 @@
+1. Numpy Operations
+
+Problem Statement: 
+
+Create the test() function, which takes array list as input and return the output in following format.
+
+Remove every second element from the given array list and save it in 'slicing arr variable. 
+
+Convert all of the values in given array list to radians and save it in 'rad_values' variable
+
+Find the log of all elements in the given array list at base 10 and save it in the 'log values' variable 
+
+Finally return slicing_arr rad_values and log_values
+
+
+
+▼ Input Format For Custom Testing
+
+array list is the input
+
+▼ Sample Case 0
+
+Sample Input For Custom Testing
+
+1,4,5,3,2,6
+
+
+
+Sample Output 
+
+([1,5,2], array([0.01745329, 0.06981317, 0.08726646, 0.05235988, 0.03490659, 0.10471976]), array([0.          ,0.60205999, 0.69897, 0.47712125,0.30103   ,0.77815125]))
+
+
+Explanation
+
+1 Remove every second element 1,4,5,3,2,6 is [1,5,2]
+
+2 radians values of 1,4,5,3,2,6 is [0.01745329, 0.06981317, 0.08726646, 0.05235988, 0.03490659, 0.10471976]
+
+3. log values of 1,4,5,3,2,6 is [0., 0.60205999, 0.69897, 0.47712125, 0.30103, 0.77815125]
+
+
+
+▼ Sample Case 1
+
+Sample Input For Custom Testing
+
+9,3,4,2,1,5,6,7
+
+
+Sample Output
+
+([9, 4, 1, 6], array([0 .15707963, 0. 05235988, 0. 06981317, 0.03490659, 0.01745329, 0.08726646, 0.10471976, 0 .12217305]), array([0. 95424251, 0 .47712125, 0.60205999, 0.30103      ,0.   , 0.69897    , 0.77815125, 0.84509804]))
+
+
+Explanation
+
+1 Remove every second element 9,3,4,2,1,5,6,7 is [9, 4, 1, 6]
+
+2 radians values of 9,3,4,2,1,5,6,7 is [0.15707963, 0.05235988, 0.06981317, 0.03490659,
+
+0.01745329, 0.08726646 , 0.10471976, 0.12217305]
+
+3. log values of 9,3,4,2,1,5,6,7 is [0.95424251, 0.47712125, 0.60205999, 0.30103, 0., 0.69897, 0.77815125, 0.84509804]
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+import numpy as np
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+def test(array_list):
+    #write your code here
+    slicing_arr = array_list[::2]
+    rad_values = np.radians(array_list)
+    log_values = np.log10(array_list)
+    
+    
+    return slicing_arr, rad_values, log_values
+
+
+if __name__ == "__main__":
+    array_list = list(map(int, input().split(',')))
+    print(test(array_list))
+
+
+
