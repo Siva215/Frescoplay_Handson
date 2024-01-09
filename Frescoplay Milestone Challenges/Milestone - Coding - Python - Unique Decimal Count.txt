@@ -1,0 +1,146 @@
+Milestone - Coding - Python - Unique Decimal Count
+
+Given a binary string, binary, that consists of characters '0' and 1 only, find the number of unique decimal representations of binary numbers that can be represented by non-empty subsequences of the string
+
+Note:
+
+1 The string binary may have leading zeros.
+
+2 A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. For example, "ace" is a subsequence of "abcde" while "aec" is not
+
+Example
+
+binary = "010"
+
+Distinct subsequences of the string are 0, 1 ,01, 010, 10.
+
+Their corresponding decimal representations are 0, 1, 1, 2, 2
+
+• Distinct decimal numbers are 0,1,2.
+
+The unique decimal representations count is 3.
+
+Return 3.
+
+Function Description
+
+Complete the function getCount in the editor below.
+
+getCount has the following parameter
+
+strine binary: a binary string
+
+Constraints
+
+1s/binary ≤ 20
+
+The string binary consists of characters '0' and '1' only
+
+
+
+▼Input Format For Custom Testing
+
+The first line contains a binary string, binary
+
+▼ Sample Case 0
+
+Sample Input For Custom Testing
+
+STDIN     FUNCTION
+------    ---------
+011     -> binary = "011"
+
+Sample Output
+
+3
+
+
+Explanation
+
+Given binary = "011"
+
+Distinct subsequences of the string are 0, 1,01 ,11
+
+• Their corresponding decimal representations are 0,1,1,3
+
+• Distinct decimal numbers are 0,1,3.
+
+
+
+
+
+▼ Sample Case 1
+
+  Sample Input For Custom Testing
+
+
+STDIN       FUNCTION
+------      ---------
+ 11        ->  binary = "11"
+
+
+Sample Output
+
+2
+
+Explanation
+
+
+
+Distinct subsequences of the string are 1,11
+
+• Their corresponding decimal representations are 1,3
+
+• Distinct decimal numbers are 1,3.
+
+
+
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+#
+# Complete the 'getCount' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts STRING binary as parameter.
+#
+
+import itertools
+
+
+def getCount(binary):
+    binary_list = list(binary)
+    
+    # Generate all possible subsequences of binary string
+    subsequences = []
+    for i in range(1, len(binary_list) + 1):
+        subsequences += itertools.combinations(binary_list, i)
+    
+    # Convert each subsequence to decimal and add to set
+    decimal_set = set()
+    for subsequence in subsequences:
+        decimal_set.add(int(''.join(subsequence), 2))
+    
+    # Return count of unique decimal representations
+    return len(decimal_set)
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    binary = input()
+
+    result = getCount(binary)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
