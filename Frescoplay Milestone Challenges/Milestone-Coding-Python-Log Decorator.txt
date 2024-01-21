@@ -1,0 +1,157 @@
+1. Milestone - Coding - Python - Log Decorator
+
+Implement a decorator that logs the invocation of the decorated function to the provided file descriptor You can assume that it will only decorate functions that take in positional arguments.
+
+* The log line should follow this format LOG <function_name>
+
+  (<comma_separated_call_parameters>) The last character should be a newline
+
+* The line should be logged prior to the execution of the decorated function's body
+
+
+
+Example 
+
+
+@log(descriptor)
+
+def my max(a, b, c):
+
+  return max(a, b, c)
+
+@log(descriptor)
+
+def my min(a, b):
+
+  return min(a, b)
+
+my max (20, 9, 10) 
+my min(1, 2)
+
+
+
+Writes to the given descriptor the following output
+
+LOG: my max (20,9,10)
+
+LOG: my min(1,2)
+
+
+Your implementation of the decorator will be tested by a provided code stub on several input files. Each input file contains parameters to call a decorated function. The provided code calls the functions and writes the returned values to the descriptor.
+
+
+Constraints:
+
+The decorated function takes only positional arguments.
+
+▼ Input Format Format for Custom Testing
+
+Input from stdin will be processed as follows and passed to the function.
+
+In the first line, there is an integer q, the number of function calls to be executed.
+
+Each of the following q lines contains space-separated parameters that describe a function call The first parameter is the name of the function and the other parameters its arguments.
+
+
+▼ Sample Case 0
+
+Sample Input 0
+
+STDIN              Function
+------            -----------
+3             ->     q=3
+
+my max 2 7 1   ->    call 1 to be decorated
+
+my min 7 1     ->    call 2 to be decorated
+
+my sum 2 7 1 10  ->  call 3 to be decorated
+
+
+Sample Output 0
+
+LOG: my max(2,7,1)
+7
+
+LOG :my min(7,1) 
+1
+
+LOG: my sum(2,7,1,10)
+20
+
+
+
+Explanation 0
+
+There are 3 function calls to be executed:
+
+The first one calls the decorated my max function to return a maximum value of 271 The decorator prints LOG: my_max(2,7 1) to the given descriptor and the provided code writes the returned value 7 to the descriptor after the log
+
+The second one calls the decorated my min function to return a minimum value of 7 1 The decorator prints LOG: my_min(71) to the given descriptor and the provided code writes the returned value, 1. to the descriptor after the log
+
+The third one calls the decorated my sum function to return the sum of values of 2 7 1 10. The decorator prints LOG: my sum(2.71 10) to the given descriptor and the provided code writes the returned value, 20, to the descriptor after the log.
+
+
+
+
+write code in python3?
+
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+def log(descriptor):
+    # Implement the decorator here
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            log_line = f"LOG: {func.__name__}({','.join(map(str, args))})\n"
+            descriptor.write(log_line)
+            result = func(*args, **kwargs)
+            return result
+
+        return wrapper
+
+    return decorator
+
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    @log(fptr)
+    def my_max(a, b, c):
+        return max(a, b, c)
+
+
+    @log(fptr)
+    def my_min(a, b):
+        return min(a, b)
+
+
+    @log(fptr)
+    def my_sum(*args):
+        return sum(args)
+
+
+    q = int(input())
+    for _ in range(q):
+        line = input().split()
+        f_name, params = line[0], map(int, line[1:])
+        if f_name == "my_min":
+            res = my_min(*params)
+            fptr.write(f"{res}\n")
+        elif f_name == "my_max":
+            res = my_max(*params)
+            fptr.write(f"{res}\n")
+        elif f_name == "my_sum":
+            res = my_sum(*params)
+            fptr.write(f"{res}\n")
+        else:
+            raise ValueError("Unknown function name %s" % f_name)
+    fptr.close()
