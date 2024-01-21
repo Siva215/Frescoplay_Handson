@@ -94,7 +94,7 @@ The third one calls the decorated my sum function to return the sum of values of
 
 
 
-write code in python3?
+
 
 
 #!/bin/python3
